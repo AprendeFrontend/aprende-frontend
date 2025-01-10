@@ -8,6 +8,7 @@ const StyledHeader = styled.header`
 	padding: 1.5rem;
 	box-shadow: 0 2px 0.25rem rgb(0 0 0 /0.25);
 	background-color: ${COLORS.grey};
+	overflow-x: clip;
 `;
 
 export { StyledHeader };
