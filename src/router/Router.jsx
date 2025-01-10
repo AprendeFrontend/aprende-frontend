@@ -11,6 +11,7 @@ const Router = () => {
 			<Route path='/' element={<Layout />}>
 				<Route index element={<Home />} />
 				<Route path='/challenges' element={<Challenges />} />
+
 				<Route element={<ProtectedRoute />}>
 					<Route path='/profile' element={<Profile />} />
 				</Route>

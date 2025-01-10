@@ -1,4 +1,5 @@
 import { useContext } from 'react';
+import Logout from '../../components/logout/Logout';
 import { AuthContext } from '../../contexts/Auth.context';
 
 const Profile = () => {
@@ -10,6 +11,7 @@ const Profile = () => {
 			<h1>PROFILE</h1>
 			<img src={profileImage} alt='' />
 			<span>{username}</span>
+			<Logout />
 		</>
 	);
 };
