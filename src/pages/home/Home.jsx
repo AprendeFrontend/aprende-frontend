@@ -1,30 +1,29 @@
-import { StyledHome } from './home.styles';
+import Hero from '../../components/hero/Hero';
+import { StyledMainContainer } from '../../styles/common';
 
 const Home = () => {
 	return (
-		<StyledHome>
-			<h1>HOME</h1>
+		<StyledMainContainer>
+			<Hero />
+			<h2>Un Camino Claro hacia el Éxito</h2>
 			<p>
-				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt sunt
-				reprehenderit deserunt iusto eaque distinctio. Laboriosam vel,
-				consequatur, suscipit ipsa ab quod laborum nulla itaque odio, officia
-				totam tenetur delectus?
+				Olvídate del caos de aprender al azar. Aquí te guiamos con retos
+				organizados de forma progresiva, asegurándonos de que domines cada
+				concepto antes de pasar al siguiente nivel.
 			</p>
+			<h2>Aprende sin Abrumarte</h2>
 			<p>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste libero
-				facilis quae corrupti laborum esse explicabo doloremque nobis natus
-				suscipit harum soluta cupiditate, ullam mollitia saepe officiis nisi
-				vero officia. A, corrupti? Quisquam dolores, delectus suscipit ullam
-				quod ad ducimus laborum, eaque quis sequi, cupiditate dolorum! Cum
-				pariatur, nesciunt necessitatibus repellat suscipit maiores, natus odit
-				soluta eveniet commodi ipsa numquam! Repudiandae, vel, cumque iste
-				sapiente, unde cum voluptas dolor repellat reprehenderit corrupti
-				voluptatibus. Et, ut, quaerat vel facere itaque ab ipsam adipisci
-				incidunt ad aperiam assumenda pariatur illo perspiciatis provident.
-				Dolorum perspiciatis aut consequatur quaerat, ex voluptatem, iusto sequi
-				nam, ab aperiam est dolores laborum? Nostrum, unde voluptatibus corrupti
+				Cada reto está diseñado para estar dentro de tu capacidad actual. Ni
+				demasiado fácil ni fuera de tu alcance, solo el equilibrio perfecto para
+				mantenerte motivado y aprendiendo.
 			</p>
-		</StyledHome>
+			<h2>Desarrolla Habilidades Reales.</h2>
+			<p>
+				Aquí no se trata de hacer ejercicios sin sentido. Cada reto tiene un
+				propósito claro, preparándote para resolver problemas reales y construir
+				proyectos que realmente importen.
+			</p>
+		</StyledMainContainer>
 	);
 };
 

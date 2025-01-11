@@ -7,6 +7,10 @@ export const AuthProvider = ({ children }) => {
 	const [currentUser, setCurrentUser] = useState(null);
 	const [loading, setLoading] = useState(true);
 
+	const areUser = currentUser && !loading;
+	const username = currentUser?.reloadUserInfo.screenName;
+	const profileImage = currentUser?.reloadUserInfo.photoUrl;
+
 	useEffect(() => {
 		const unsuscribe = auth.onAuthStateChanged(user => {
 			if (user) {
@@ -21,7 +25,7 @@ export const AuthProvider = ({ children }) => {
 	}, []);
 
 	return (
-		<AuthContext.Provider value={{ currentUser, loading }}>
+		<AuthContext.Provider value={{ loading, areUser, username, profileImage }}>
 			{children}
 		</AuthContext.Provider>
 	);

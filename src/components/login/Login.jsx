@@ -1,18 +1,8 @@
-import { GithubAuthProvider, signInWithPopup } from 'firebase/auth';
-
-import { auth } from '../../config/firebase.config';
+import { signInWithGithub } from '../../utils/auth-functions';
+import Button from '../button/Button';
 
 const Login = () => {
-	return <button onClick={signInWithGithub}>INICIAR SESIÓN</button>;
-};
-
-const signInWithGithub = async () => {
-	try {
-		const provider = new GithubAuthProvider();
-		await signInWithPopup(auth, provider);
-	} catch (error) {
-		console.error(error);
-	}
+	return <Button action={signInWithGithub}>Inicia Sesión</Button>;
 };
 
 export default Login;

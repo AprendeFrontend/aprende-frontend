@@ -3,9 +3,8 @@ import Logout from '../../components/logout/Logout';
 import { AuthContext } from '../../contexts/Auth.context';
 
 const Profile = () => {
-	const { currentUser } = useContext(AuthContext);
-	const username = currentUser?.reloadUserInfo.screenName;
-	const profileImage = currentUser?.reloadUserInfo.photoUrl;
+	const { username, profileImage } = useContext(AuthContext);
+
 	return (
 		<>
 			<h1>PROFILE</h1>

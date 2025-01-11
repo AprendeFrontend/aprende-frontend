@@ -1,12 +1,7 @@
-import { signOut } from 'firebase/auth';
-import { auth } from '../../config/firebase.config';
+import { logout } from '../../utils/auth-functions';
 
 const Logout = () => {
 	return <button onClick={logout}>Cerrar Sesión</button>;
-};
-
-const logout = async () => {
-	await signOut(auth);
 };
 
 export default Logout;

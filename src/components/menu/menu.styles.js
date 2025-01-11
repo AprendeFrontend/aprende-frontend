@@ -42,6 +42,10 @@ const StyledMenuItem = styled.li`
 		height: 1px;
 		background-color: ${COLORS.primary};
 	}
+
+	&:last-child {
+		color: ${COLORS.error};
+	}
 `;
 
 const StyledLink = styled(NavLink)``;
