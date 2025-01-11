@@ -8,7 +8,7 @@ const saveUserIfNotExists = async user => {
 		const userRef = doc(db, 'users', user.uid);
 		const userSnap = await getDoc(userRef);
 
-		if (userSnap.exists()) return userSnap.data();
+		if (userSnap.exists()) return;
 
 		await setDoc(userRef, {
 			displayName: user.displayName || 'Anónimo',
@@ -20,21 +20,17 @@ const saveUserIfNotExists = async user => {
 
 		console.log('Usuario guardado exitosamente en Firestore');
 
-		return userSnap.data();
+		return;
 	} catch (error) {
 		console.error('Error al guardar el usuario:', error);
 	}
 };
 
-export const signInWithGithub = async saveDatabaseUserInfo => {
+export const signInWithGithub = async () => {
 	try {
 		const provider = new GithubAuthProvider();
 		const result = await signInWithPopup(auth, provider);
-		const userInfo = await saveUserIfNotExists(result.user);
-
-		saveDatabaseUserInfo(userInfo);
-
-		return userInfo;
+		await saveUserIfNotExists(result.user);
 	} catch (error) {
 		console.error(error);
 	}

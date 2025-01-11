@@ -2,13 +2,14 @@ import { doc, updateDoc } from 'firebase/firestore';
 import { useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Button from '../../components/button/Button';
+import Login from '../../components/login/Login';
 import { db } from '../../config/firebase.config';
 import { CHALLENGES } from '../../constants/challenges';
 import { AuthContext } from '../../contexts/Auth.context';
 import { StyledMainContainer } from '../../styles/common';
 
 const Challenge = () => {
-	const { currentUser } = useContext(AuthContext);
+	const { currentUser, areUser, loading } = useContext(AuthContext);
 
 	const { id, level } = useParams();
 
@@ -26,9 +27,11 @@ const Challenge = () => {
 
 	const { name, image, description, requirements } = challengeSelected;
 
-	const projectStart = projects.find(project => project.projectId === id);
+	const projectStart = projects?.find(project => project.projectId === id);
 
 	console.log(projectStart);
+
+	if (loading) return <h1>Loading...</h1>;
 
 	return (
 		<StyledMainContainer>
@@ -37,12 +40,16 @@ const Challenge = () => {
 			<p>{description}</p>
 			<p>{requirements}</p>
 
-			{!projectStart && (
+			{!areUser && <Login />}
+
+			{!projectStart && areUser && (
 				<Button action={() => updateProjets(currentUser, name, id)}>
 					EMPEZAR DESAFÍO
 				</Button>
 			)}
-			{projectStart && <p>Proyecto empezado el {projectStart.startTime}</p>}
+			{projectStart && areUser && (
+				<p>Proyecto empezado el {projectStart.startTime}</p>
+			)}
 		</StyledMainContainer>
 	);
 };
