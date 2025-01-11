@@ -5,7 +5,7 @@ import { signInWithGithub } from '../../utils/auth-functions';
 import Button from '../button/Button';
 
 const Hero = () => {
-	const { areUser, username } = useContext(AuthContext);
+	const { areUser, username, saveDatabaseUserInfo } = useContext(AuthContext);
 	return (
 		<div>
 			{!areUser && (
@@ -16,7 +16,7 @@ const Hero = () => {
 						correcto y ajustados a tu nivel. Aquí no saltamos pasos, ¡evoluciona
 						de principiante a experto de forma efectiva!
 					</p>
-					<Button action={signInWithGithub}>
+					<Button action={() => signInWithGithub(saveDatabaseUserInfo)}>
 						Empieza tu aprendizaje ahora
 					</Button>
 				</>

@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
-import { MENU_ICONS, MENU_ITEMS } from '../../constants/menu';
+import { ICONS } from '../../constants/icons';
+import { MENU_ITEMS } from '../../constants/menu';
 import { AuthContext } from '../../contexts/Auth.context';
 import { logout } from '../../utils/auth-functions';
 import Login from '../login/Login';
@@ -20,9 +21,7 @@ const Menu = () => {
 		setIsOpen(false);
 	}, [areUser, pathname]);
 
-	const menuImage = isOpen
-		? '/assets/images/cross.svg'
-		: '/assets/images/hamburger.svg';
+	const menuImage = isOpen ? ICONS.CROSS : ICONS.HAMBURGER;
 
 	return (
 		<>
@@ -43,12 +42,12 @@ const Menu = () => {
 					{!areUser && <Login />}
 					{areUser && (
 						<>
-							<StyledMenuItem $icon={MENU_ICONS.PROFILE}>
+							<StyledMenuItem $icon={ICONS.PROFILE}>
 								<StyledLink to='/profile' onClick={() => setIsOpen(false)}>
 									Perfil
 								</StyledLink>
 							</StyledMenuItem>
-							<StyledMenuItem $icon={MENU_ICONS.LOGOUT}>
+							<StyledMenuItem $icon={ICONS.LOGOUT}>
 								<StyledLink to='/profile' onClick={logout}>
 									Cerrar Sesión
 								</StyledLink>

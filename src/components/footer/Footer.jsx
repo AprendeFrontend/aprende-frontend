@@ -1,3 +1,4 @@
+import { ICONS } from '../../constants/icons';
 import { StyledFooter, StyledFooterIcons } from './footer.styles';
 
 const Footer = () => {
@@ -6,10 +7,10 @@ const Footer = () => {
 		<StyledFooter>
 			<span>©AprendeFrontend {currentYear}</span>
 			<StyledFooterIcons>
-				<img src='/assets/images/discord.svg' alt='discord icon' />
-				<img src='/assets/images/twitter.svg' alt='twitter icon' />
-				<img src='/assets/images/instagram.svg' alt='instagram icon' />
-				<img src='/assets/images/tiktok.svg' alt='discord tiktokcon' />
+				<img src={ICONS.DISCORD} alt='discord icon' />
+				<img src={ICONS.TWITTER} alt='twitter icon' />
+				<img src={ICONS.INSTAGRAM} alt='instagram icon' />
+				<img src={ICONS.TIKTOK} alt='discord tiktokcon' />
 			</StyledFooterIcons>
 		</StyledFooter>
 	);
