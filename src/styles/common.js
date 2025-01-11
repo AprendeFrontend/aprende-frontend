@@ -4,4 +4,9 @@ const StyledMainContainer = styled.main`
 	padding: 2.25rem 1.5rem;
 `;
 
-export { StyledMainContainer };
+const StyledProfileImage = styled.img`
+	width: 50px;
+	border-radius: 50%;
+`;
+
+export { StyledMainContainer, StyledProfileImage };

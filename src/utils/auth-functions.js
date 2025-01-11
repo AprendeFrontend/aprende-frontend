@@ -11,12 +11,13 @@ const saveUserIfNotExists = async user => {
 		console.log(userSnap);
 
 		if (userSnap.exists()) return;
-		// Si el usuario no existe, lo guardamos en Firestore
+
 		await setDoc(userRef, {
 			displayName: user.displayName || 'Anónimo',
 			email: user.email,
 			photoURL: user.photoURL || null,
-			createdAt: serverTimestamp()
+			createdAt: serverTimestamp(),
+			projects: []
 		});
 		console.log('Usuario guardado exitosamente en Firestore');
 	} catch (error) {
