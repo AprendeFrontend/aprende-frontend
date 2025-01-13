@@ -1,6 +1,5 @@
+import { doc, onSnapshot } from 'firebase/firestore';
 import { useEffect, useState } from 'react';
-
-import { doc, getDoc } from 'firebase/firestore';
 import { auth, db } from '../config/firebase.config';
 import { AuthContext } from '../contexts/Auth.context';
 
@@ -13,12 +12,23 @@ export const AuthProvider = ({ children }) => {
 	const profileImage = currentUser?.photoURL;
 
 	useEffect(() => {
-		const unsuscribe = auth.onAuthStateChanged(async user => {
+		let unsubscribeUser = null;
+
+		const unsubscribeAuth = auth.onAuthStateChanged(user => {
 			if (user) {
-				const databaseInfo = await fetchUserFromDatabase(user.uid);
-				setCurrentUser({
-					...user,
-					...databaseInfo // Incluye todos los datos de Firestore
+				// Configurar un watcher en Firestore para el usuario autenticado
+				const userRef = doc(db, 'users', user.uid);
+				unsubscribeUser = onSnapshot(userRef, docSnapshot => {
+					if (docSnapshot.exists()) {
+						// Actualiza `currentUser` con datos en tiempo real
+						setCurrentUser({
+							...user,
+							...docSnapshot.data()
+						});
+					} else {
+						console.warn('El documento del usuario no existe.');
+						setCurrentUser(user); // Mantén los datos básicos de Auth si no hay datos en Firestore
+					}
 				});
 			} else {
 				setCurrentUser(null);
@@ -26,7 +36,11 @@ export const AuthProvider = ({ children }) => {
 			setLoading(false);
 		});
 
-		return () => unsuscribe();
+		return () => {
+			// Limpiar ambos listeners cuando el componente se desmonte
+			if (unsubscribeUser) unsubscribeUser();
+			unsubscribeAuth();
+		};
 	}, []);
 
 	return (
@@ -42,19 +56,4 @@ export const AuthProvider = ({ children }) => {
 			{children}
 		</AuthContext.Provider>
 	);
-};
-
-const fetchUserFromDatabase = async uid => {
-	try {
-		const userRef = doc(db, 'users', uid); // Ruta a la colección de usuarios en Firestore
-		const userSnap = await getDoc(userRef);
-
-		if (userSnap.exists()) {
-			return userSnap.data(); // Retorna los datos de Firestore
-		}
-		return null; // Si el documento no existe
-	} catch (error) {
-		console.error('Error al obtener la información del usuario:', error);
-		return null;
-	}
 };

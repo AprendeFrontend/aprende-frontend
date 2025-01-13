@@ -10,14 +10,13 @@ const Hero = () => {
 		<div>
 			{!areUser && (
 				<>
-					<h1>Aprende Frontend Paso a Paso.</h1>
+					<h1>Aprende Frontend Paso a Paso</h1>
 					<p>
-						Domina el desarrollo frontend con retos diseñados en el orden
-						correcto y ajustados a tu nivel. Aquí no saltamos pasos, ¡evoluciona
-						de principiante a experto de forma efectiva!
+						Paso a paso, proyecto a proyecto. Aquí no solo aprendes, construyes.
+						Mejora tus habilidades mientras creas proyectos para tu portfolio.
 					</p>
 					<Button action={() => signInWithGithub(saveDatabaseUserInfo)}>
-						Empieza tu aprendizaje ahora
+						Empieza tu aprendizaje
 					</Button>
 				</>
 			)}

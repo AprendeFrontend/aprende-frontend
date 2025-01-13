@@ -14,12 +14,12 @@ export const MENU_ITEMS = [
 		path: '/challenges',
 		icon: ICONS.CHALLENGES
 	},
-	{
-		id: v4(),
-		text: 'Clasificación',
-		path: '/ranking',
-		icon: ICONS.RANKING
-	},
+	// {
+	// 	id: v4(),
+	// 	text: 'Clasificación',
+	// 	path: '/ranking',
+	// 	icon: ICONS.RANKING
+	// },
 	{
 		id: v4(),
 		text: 'Artículos',
