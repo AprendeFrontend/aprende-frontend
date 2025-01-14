@@ -39,6 +39,10 @@ const StyledMenuItem = styled.li`
 		height: 1px;
 		background-color: ${COLORS.primary};
 	}
+
+	&:last-child {
+		color: ${COLORS.error};
+	}
 `;
 
 const StyledLink = styled(NavLink)`
@@ -51,20 +55,4 @@ const StyledLink = styled(NavLink)`
 	}
 `;
 
-const StyledSubmenu = styled.ul`
-	display: ${({ $isSubmenuOpen }) => ($isSubmenuOpen ? 'flex' : 'none')};
-	flex-direction: column;
-	gap: 1.5rem;
-	padding-inline: 2rem;
-	width: 100%;
-	max-height: ${({ $isSubmenuOpen }) => ($isSubmenuOpen ? '100px' : '0')};
-	overflow: hidden;
-`;
-
-export {
-	StyledHamburger,
-	StyledLink,
-	StyledMenu,
-	StyledMenuItem,
-	StyledSubmenu
-};
+export { StyledHamburger, StyledLink, StyledMenu, StyledMenuItem };

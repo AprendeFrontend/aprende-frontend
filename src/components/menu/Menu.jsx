@@ -46,13 +46,17 @@ const Menu = () => {
 					{!areUser && <Login />}
 					{areUser && (
 						<>
-							<StyledMenuItem $icon={ICONS.PROFILE}>
-								<StyledLink to='/profile' onClick={() => setIsOpen(false)}>
+							<StyledMenuItem>
+								<StyledLink
+									to='/profile'
+									$icon={ICONS.PROFILE}
+									onClick={() => setIsOpen(false)}
+								>
 									Perfil
 								</StyledLink>
 							</StyledMenuItem>
-							<StyledMenuItem $icon={ICONS.LOGOUT}>
-								<StyledLink to='/profile' onClick={logout}>
+							<StyledMenuItem>
+								<StyledLink to='/profile' $icon={ICONS.LOGOUT} onClick={logout}>
 									Cerrar Sesión
 								</StyledLink>
 							</StyledMenuItem>
