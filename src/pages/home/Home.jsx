@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
 import Button from '../../components/button/Button';
 import Hero from '../../components/hero/Hero';
+import Login from '../../components/login/Login';
 import { StyledMainContainer } from '../../styles/common';
-import { signInWithGithub } from '../../utils/auth-functions';
 
 const Home = () => {
 	return (
@@ -31,7 +31,7 @@ const Home = () => {
 				Cada paso que das merece ser reconocido. Sigue tu evolución, completa
 				desafíos y construye proyectos que te llenen de orgullo.
 			</p>
-			<Button action={signInWithGithub}>Comienza Aquí</Button>
+			<Login>Comienza Aquí</Login>
 		</StyledMainContainer>
 	);
 };

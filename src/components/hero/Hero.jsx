@@ -1,8 +1,8 @@
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../contexts/Auth.context';
-import { signInWithGithub } from '../../utils/auth-functions';
 import Button from '../button/Button';
+import Login from '../login/Login';
 
 const Hero = () => {
 	const { areUser, username, saveDatabaseUserInfo } = useContext(AuthContext);
@@ -15,9 +15,7 @@ const Hero = () => {
 						Paso a paso, proyecto a proyecto. Aquí no solo aprendes, construyes.
 						Mejora tus habilidades mientras creas proyectos para tu portfolio.
 					</p>
-					<Button action={() => signInWithGithub(saveDatabaseUserInfo)}>
-						Empieza tu aprendizaje
-					</Button>
+					<Login>Empieza tu aprendizaje</Login>
 				</>
 			)}
 			{areUser && (

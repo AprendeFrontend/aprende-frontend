@@ -1,8 +1,8 @@
 import Button from '../button/Button';
 
-const Login = () => {
-	// return <Button action={signInWithGithub}>Inicia Sesión</Button>;
-	return <Button>Inicia Sesión</Button>;
+const Login = ({ children = 'Inicia Sesion' }) => {
+	// return <Button action={signInWithGithub}>{children}</Button>;
+	return <Button>{children}</Button>;
 };
 
 export default Login;
