@@ -33,8 +33,12 @@ const Menu = () => {
 			<nav>
 				<StyledMenu $isOpen={isOpen}>
 					{MENU_ITEMS.map(item => (
-						<StyledMenuItem key={item.id} $icon={item.icon}>
-							<StyledLink to={item.path} onClick={() => setIsOpen(false)}>
+						<StyledMenuItem key={item.id}>
+							<StyledLink
+								to={item.path}
+								$icon={item.icon}
+								onClick={() => setIsOpen(false)}
+							>
 								{item.text}
 							</StyledLink>
 						</StyledMenuItem>

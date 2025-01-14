@@ -14,16 +14,36 @@ export const MENU_ITEMS = [
 		path: '/challenges',
 		icon: ICONS.CHALLENGES
 	},
-	// {
-	// 	id: v4(),
-	// 	text: 'Clasificación',
-	// 	path: '/ranking',
-	// 	icon: ICONS.RANKING
-	// },
 	{
 		id: v4(),
-		text: 'Artículos',
-		path: '/articles',
-		icon: ICONS.ARTICLES
+		text: 'Roadmap',
+		path: '/roadmap',
+		icon: ICONS.ROADMAP,
+		submenus: [
+			{
+				id: v4(),
+				text: 'Fundamentos Web',
+				path: '/fundamentals',
+				icon: ICONS.FUNDAMENTALS
+			},
+			{
+				id: v4(),
+				text: 'HTML',
+				path: '/html',
+				icon: ICONS.HTML
+			},
+			{
+				id: v4(),
+				text: 'CSS',
+				path: '/css',
+				icon: ICONS.CSS
+			},
+			{
+				id: v4(),
+				text: 'JavaScript',
+				path: '/javascript',
+				icon: ICONS.JAVASCRIPT
+			}
+		]
 	}
 ];

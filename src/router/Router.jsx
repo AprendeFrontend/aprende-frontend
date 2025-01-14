@@ -5,7 +5,7 @@ import Home from '../pages/home/Home';
 
 import Challenge from '../pages/challenge/Challenge';
 import Profile from '../pages/profile/Profile';
-import Ranking from '../pages/ranking/Ranking';
+import Roadmap from '../pages/roadmap/Roadmap';
 import ProtectedRoute from './ProtectedRoute';
 
 const Router = () => {
@@ -15,7 +15,7 @@ const Router = () => {
 				<Route index element={<Home />} />
 				<Route path='/challenges' element={<Challenges />} />
 				<Route path='/challenge/:level/:id' element={<Challenge />} />
-				<Route path='/ranking' element={<Ranking />} />
+				<Route path='/roadmap' element={<Roadmap />} />
 				<Route element={<ProtectedRoute />}>
 					<Route path='/profile' element={<Profile />} />
 				</Route>

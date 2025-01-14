@@ -5,6 +5,7 @@ const Logo = () => {
 	return (
 		<Link to='/'>
 			<img src={ICONS.LOGO} alt='logo' />
+			<span>BETA</span>
 		</Link>
 	);
 };

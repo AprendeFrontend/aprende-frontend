@@ -26,15 +26,12 @@ const StyledMenu = styled.ul`
 const StyledMenuItem = styled.li`
 	position: relative;
 	display: flex;
-	align-items: center;
+	flex-direction: column;
+	align-items: flex-start;
 	gap: 1rem;
 	width: 100%;
 
 	&::before {
-		content: url(${({ $icon }) => $icon});
-	}
-
-	&::after {
 		content: '';
 		position: absolute;
 		bottom: -12px;
@@ -42,12 +39,32 @@ const StyledMenuItem = styled.li`
 		height: 1px;
 		background-color: ${COLORS.primary};
 	}
+`;
 
-	&:last-child {
-		color: ${COLORS.error};
+const StyledLink = styled(NavLink)`
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+
+	&::before {
+		content: url(${({ $icon }) => $icon});
 	}
 `;
 
-const StyledLink = styled(NavLink)``;
+const StyledSubmenu = styled.ul`
+	display: ${({ $isSubmenuOpen }) => ($isSubmenuOpen ? 'flex' : 'none')};
+	flex-direction: column;
+	gap: 1.5rem;
+	padding-inline: 2rem;
+	width: 100%;
+	max-height: ${({ $isSubmenuOpen }) => ($isSubmenuOpen ? '100px' : '0')};
+	overflow: hidden;
+`;
 
-export { StyledHamburger, StyledLink, StyledMenu, StyledMenuItem };
+export {
+	StyledHamburger,
+	StyledLink,
+	StyledMenu,
+	StyledMenuItem,
+	StyledSubmenu
+};
