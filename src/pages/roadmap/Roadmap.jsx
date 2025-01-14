@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Button from '../../components/button/Button';
 import { StyledMainContainer } from '../../styles/common';
 
@@ -38,7 +39,9 @@ const Roadmap = () => {
 				funciona una web, qué es un cliente, un servidor, conceptos básicos de
 				funcionamiento, aquí te dejo la chuleta para que aprendas lo necesario
 			</p>
-			<Button>Ver Fundamentos</Button>
+			<Link to='/fundamentals'>
+				<Button>Ver Fundamentos</Button>
+			</Link>
 			<h2>HTML</h2>
 			<p>
 				HTML es como el esqueleto de tu sitio web: sin él, todo se derrumbaría
@@ -47,7 +50,9 @@ const Roadmap = () => {
 				tags nada funcionaría. ¡Bienvenido al primer paso de convertirte en todo
 				un pro del código!
 			</p>
-			<Button>Ver Ruta HTML</Button>
+			<Link to='/html'>
+				<Button>Ver Ruta HTML</Button>
+			</Link>
 			<h2>CSS</h2>
 			<p>
 				CSS es el estilo y la actitud de tu sitio web: sin él, todo quedaría en
@@ -55,7 +60,9 @@ const Roadmap = () => {
 				gala y destaca, demostrando que no todo en la vida es solo estructura,
 				sino también estética y buen gusto.
 			</p>
-			<Button>Ver Ruta CSS</Button>
+			<Link to='/css'>
+				<Button>Ver Ruta CSS</Button>
+			</Link>
 			<h2>JavaScript</h2>
 			<p>
 				JavaScript es la chispa que convierte tu sitio de un simple volante
@@ -65,7 +72,9 @@ const Roadmap = () => {
 				se transforman al instante y animaciones controladas que hacen que tu
 				web brille.
 			</p>
-			<Button>Ver Ruta JavaScript</Button>
+			<Link to='/javascript'>
+				<Button>Ver Ruta JavaScript</Button>
+			</Link>
 		</StyledMainContainer>
 	);
 };
