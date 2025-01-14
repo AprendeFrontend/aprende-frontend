@@ -19,9 +19,11 @@ const Roadmap = () => {
 			<h2>La ruta para ser front en 20**</h2>
 			<p>
 				Cada comienzo de año las redes sociales se inundan con vídeos de “la
-				mejor ruta para ser front en “inserte año actual” SPOILER: la ruta es la
-				misma desde 1995. Los lenguajes evolucionan, pero la ruta no ha
-				cambiado.
+				mejor ruta para ser front en &lt;inserte año actual&gt;”
+				<p>
+					<b>SPOILER:</b> la ruta es la misma desde 1995. Los lenguajes
+					evolucionan, pero la ruta no ha cambiado.
+				</p>
 			</p>
 			<h2>Los 4 pilares del Frontend</h2>
 			<p>
