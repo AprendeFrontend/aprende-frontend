@@ -5,7 +5,7 @@ const Footer = () => {
 	const currentYear = new Date().getFullYear();
 	return (
 		<StyledFooter>
-			<span>©AprendeFrontend {currentYear}</span>
+			<span>© AprendeFrontend {currentYear}</span>
 			<StyledFooterIcons>
 				<img src={ICONS.DISCORD} alt='discord icon' />
 				<img src={ICONS.TWITTER} alt='twitter icon' />
