@@ -20,6 +20,7 @@ const Router = () => {
 					<Route path='/profile' element={<Profile />} />
 				</Route>
 			</Route>
+			<Route path='*' element={<Home />} />
 		</Routes>
 	);
 };
