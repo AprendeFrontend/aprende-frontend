@@ -1,20 +1,29 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { CHALLENGES } from '../../constants/challenges';
+import { CHALLENGES_VALUES } from '../../constants/state-constants';
 import { StyledMainContainer } from '../../styles/common';
 
 const Challenges = () => {
-	const [level, setLevel] = useState(0);
+	const [level, setLevel] = useState(CHALLENGES_VALUES.TRAINEE);
+	const [technology, setTechnology] = useState(CHALLENGES_VALUES.HTML_CSS);
 
 	return (
 		<StyledMainContainer>
 			<h1>Desafios</h1>
-			<button onClick={() => setLevel(0)}>Aprendiz</button>
-			<button onClick={() => setLevel(1)}>Junior</button>
-			<button onClick={() => setLevel(2)}>Medio</button>
-			<button onClick={() => setLevel(3)}>Avanzado</button>
-			{CHALLENGES[level].map(challenge => (
-				<Link key={challenge.id} to={`/challenge/${level}/${challenge.id}`}>
+			<button onClick={() => setLevel(CHALLENGES_VALUES.TRAINEE)}>
+				Aprendiz
+			</button>
+			<button onClick={() => setLevel(CHALLENGES_VALUES.JUNIOR)}>Junior</button>
+			<button onClick={() => setLevel(CHALLENGES_VALUES.MIDDLE)}>Medio</button>
+			<button onClick={() => setLevel(CHALLENGES_VALUES.ADVANCED)}>
+				Avanzado
+			</button>
+			{CHALLENGES[technology][level].map(challenge => (
+				<Link
+					key={challenge.id}
+					// to={`/challenge/${level}/${technology}/${challenge.id}`}
+				>
 					<div>
 						<h2>{challenge.name}</h2>
 						<img src={challenge.image} alt='' />

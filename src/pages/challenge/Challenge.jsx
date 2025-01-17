@@ -11,7 +11,8 @@ import { StyledMainContainer } from '../../styles/common';
 const Challenge = () => {
 	const { currentUser, areUser, loading } = useContext(AuthContext);
 
-	const { id, level } = useParams();
+	const { id, level, technology } = useParams();
+	console.log(level);
 
 	const [projects, setProjects] = useState([]);
 
@@ -20,7 +21,8 @@ const Challenge = () => {
 		setProjects(currentUser.projects);
 	}, [currentUser]);
 
-	const challengesForLevel = CHALLENGES[level];
+	const challengesForLevel = CHALLENGES[level][technology];
+	console.log(challengesForLevel);
 	const challengeSelected = challengesForLevel.find(
 		challenge => challenge.id === id
 	);

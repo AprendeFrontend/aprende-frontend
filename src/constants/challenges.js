@@ -2,7 +2,7 @@ const QR_CODE_COMPONENT = {
 	id: 'cc0721b5-4130-4324-851c-b3af98a37963',
 	name: 'QR code component',
 	description:
-		"A perfect first challenge if you're new to HTML and CSS. The card layout doesn't shift, so it's ideal if you haven't learned about building responsive layouts yet.",
+		'Tarjeta promocional con un diseño minimalista que incluye un código QR centrado, acompañado de un título llamativo y una breve descripción sobre cursos de desarrollo frontend. Fondo oscuro con detalles claros para resaltar la información clave y facilitar la atención al código QR.',
 	image: '/assets/images/challenges/qr-code.jpg',
 	requirements: 'Hazlo Bien'
 };
@@ -43,9 +43,13 @@ const PRICE_TABLES = {
 	requirements: 'Hazlo Bien'
 };
 
-const TRAINEE = [QR_CODE_COMPONENT, PROFILE_CARD];
-const JUNIOR = [PRICE_TABLES, PRODUCT_CARD];
-const MIDDLE = [BLACK_PLATE];
-const ADVANCED = [];
+export const CHALLENGES = {
+	0: {
+		0: [QR_CODE_COMPONENT, PROFILE_CARD],
+		1: [PRICE_TABLES, PRODUCT_CARD],
+		2: [BLACK_PLATE],
+		3: []
+	}
+};
 
-export const CHALLENGES = [TRAINEE, JUNIOR, MIDDLE, ADVANCED];
+// export const CHALLENGES = [HTML_CSS_CHALLENGES];

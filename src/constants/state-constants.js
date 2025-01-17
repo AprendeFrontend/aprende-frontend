@@ -1,0 +1,9 @@
+export const CHALLENGES_VALUES = {
+	HTML_CSS: 0,
+	JAVASCRIPT: 1,
+	REACT: 2,
+	TRAINEE: 0,
+	JUNIOR: 1,
+	MIDDLE: 2,
+	ADVANCED: 3
+};
