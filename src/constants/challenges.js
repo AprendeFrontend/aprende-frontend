@@ -3,40 +3,49 @@ const QR_CODE_COMPONENT = {
 	name: 'QR code component',
 	description:
 		"A perfect first challenge if you're new to HTML and CSS. The card layout doesn't shift, so it's ideal if you haven't learned about building responsive layouts yet.",
-	image: '/assets/images/challenges/qr-component.webp',
+	image: '/assets/images/challenges/qr-code.jpg',
 	requirements: 'Hazlo Bien'
 };
 
-const PRODUCT_PREVIEW_CART_COMPONENT = {
+const PROFILE_CARD = {
+	id: '29091f8a-012d-4a69-a4b7-fc4762bce0f5',
+	name: 'Profile Card',
+	description:
+		'Tarjeta de perfil moderna y minimalista, diseñada para resaltar información clave del usuario como nombre, profesión y estadísticas.',
+	image: '/assets/images/challenges/profile-card.jpg',
+	requirements: 'Hazlo Bien'
+};
+
+const PRODUCT_CARD = {
 	id: '321b2fbb-aec8-43d5-9526-5ae14072a312',
-	name: 'Product preview cart component',
+	name: 'Product card',
 	description:
-		'This HTML & CSS-only challenge will be perfect for anyone starting to build responsive projects.',
-	image: '/assets/images/challenges/product-preview-card-component.webp',
+		'Un diseño moderno y profesional para tarjetas de producto, enfocado en la presentación clara y atractiva de la información. Este diseño está optimizado para uso en diferentes plataformas, tanto móviles como de escritorio, asegurando una experiencia visual consistente.',
+	image: '/assets/images/challenges/product-card.jpg',
 	requirements: 'Hazlo Bien'
 };
 
-const PRODUCT_LIST_WITH_CART = {
+const BLACK_PLATE = {
 	id: '96882f60-4145-4f81-901a-e6ad8d108f44',
-	name: 'Product list with cart',
+	name: 'Black Plate',
 	description:
-		'Practice updating the UI in multiple places based on user actions. The starter download also includes a JSON file to help you practice populating the DOM dynamically.',
-	image: '/assets/images/challenges/product-list-with-cart.webp',
+		'Este diseño combina una elegante interfaz oscura con detalles dorados, ideal para restaurantes de alta categoría o plataformas de comida gourmet. Está dividido en dos secciones principales para una experiencia intuitiva:',
+	image: '/assets/images/challenges/black-plate.jpg',
 	requirements: 'Hazlo Bien'
 };
 
-const CONNECT_FOUR = {
+const PRICE_TABLES = {
 	id: '4b7a9699-1d7f-484e-9eb7-7bddd6018496',
-	name: 'Connect Four Game',
+	name: 'Price Tables',
 	description:
-		"Your JS knowledge will be challenged in this fun project, where you'll build a two-player game. You'll write the logic for the game and how to test for win conditions.",
-	image: '/assets/images/challenges/connect-four.webp',
+		'Un diseño moderno y limpio para tablas de precios, ideal para destacar las opciones de servicios o productos de forma clara y atractiva. El diseño está estructurado para ser intuitivo y fácil de comparar, con elementos visuales que guían al usuario hacia la mejor opción.',
+	image: '/assets/images/challenges/price-tables.jpg',
 	requirements: 'Hazlo Bien'
 };
 
-const TRAINEE = [QR_CODE_COMPONENT];
-const JUNIOR = [PRODUCT_PREVIEW_CART_COMPONENT];
-const MIDDLE = [PRODUCT_LIST_WITH_CART];
-const ADVANCED = [CONNECT_FOUR];
+const TRAINEE = [QR_CODE_COMPONENT, PROFILE_CARD];
+const JUNIOR = [PRICE_TABLES, PRODUCT_CARD];
+const MIDDLE = [BLACK_PLATE];
+const ADVANCED = [];
 
 export const CHALLENGES = [TRAINEE, JUNIOR, MIDDLE, ADVANCED];

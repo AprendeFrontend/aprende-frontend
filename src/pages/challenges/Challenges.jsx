@@ -16,8 +16,8 @@ const Challenges = () => {
 			{CHALLENGES[level].map(challenge => (
 				<Link key={challenge.id} to={`/challenge/${level}/${challenge.id}`}>
 					<div>
-						<img src={challenge.image} alt='' />
 						<h2>{challenge.name}</h2>
+						<img src={challenge.image} alt='' />
 						<p>{challenge.description}</p>
 						<span>{challenge.requirements}</span>
 					</div>
