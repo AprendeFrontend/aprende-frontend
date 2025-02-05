@@ -1,0 +1,26 @@
+.social {
+  position: absolute;
+  top: -25px;
+  right: 20px;
+  display: flex;
+  gap: 0.75rem;
+  padding-block: 0;
+  padding-left: 0;
+  list-style: none;
+  z-index: 1;
+}
+
+.social-item {
+  width: 25px;
+}
+
+@media screen and (width>1400px) {
+  .social {
+    top: -100px;
+    right: 50px;
+  }
+
+  .social-item {
+    width: 35px;
+  }
+}
