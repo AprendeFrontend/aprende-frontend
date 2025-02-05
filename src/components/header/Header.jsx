@@ -1,14 +1,13 @@
 'use client'; // Necesario para Hooks en Next.js
 
-import Link from 'next/link';
 import Button from '../button/Button';
-import Buttons from '../buttons/Buttons';
 import styles from './header.module.css';
 
 import { useAuth } from '@/providers/AuthProvider';
+import Hero from '../hero/Hero';
 
 const Header = ({ className = '', children, ...props }) => {
-  const { user, login, logout } = useAuth(); // Obtener usuario desde el contexto
+  const { user, logout, login } = useAuth();
   const headerStyles = styles[className];
   const { title, text, image } = props;
 
@@ -33,28 +32,11 @@ const Header = ({ className = '', children, ...props }) => {
           )}
         </div>
       </div>
-      <div className={styles['header-info']}>
-        <div>
-          <h1 className={styles['header-title']}>{title}</h1>
-          <p className={styles['header-text']}>{text}</p>
-          {!user && (
-            <Buttons>
-              <Button className='button-primary' onClick={login}>
-                Empieza a aprender
-              </Button>
-              <Link href='/challenges'>
-                <Button className='button-secondary'>Ver Desafíos</Button>
-              </Link>
-            </Buttons>
-          )}
-          {user && (
-            <a href='/challenges'>
-              <Button className='button-primary'>Ver Desafíos</Button>
-            </a>
-          )}
-        </div>
-        <img className={styles['header-image']} src={image} alt='' />
-      </div>
+
+      <Hero title={title} text={text} image={image}>
+        {children}
+      </Hero>
+
       <img className={styles['header-wave']} src='/assets/images/header-wave.svg' alt='' />
     </header>
   );

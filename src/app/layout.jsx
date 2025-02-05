@@ -1,6 +1,5 @@
-import Footer from '@/components/footer/Footer';
-import './globals.css';
 import { AuthProvider } from '@/providers/AuthProvider';
+import './globals.css';
 
 export const metadata = {
   title: 'Aprende Frontend',
@@ -13,7 +12,6 @@ export default function RootLayout({ children }) {
     <html lang='en'>
       <body>
         <AuthProvider>{children}</AuthProvider>
-        <Footer />
       </body>
     </html>
   );

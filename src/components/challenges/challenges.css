@@ -1,0 +1,57 @@
+.filters {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 1rem;
+	width: fit-content;
+	margin-inline: auto;
+	margin-block: 2rem;
+}
+
+.filters > * {
+	cursor: pointer;
+}
+
+.challenges {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 400px));
+	grid-template-rows: repeat(3, min-content);
+	gap: 2rem;
+	justify-content: center;
+	margin-inline: auto;
+	margin-bottom: 3rem;
+	padding-inline: 1rem;
+	max-width: 1400px;
+	min-height: 80vh;
+}
+
+@media screen and (width>1400px) {
+	.challenges {
+		margin-bottom: 10rem;
+	}
+}
+
+.challenge-box {
+	position: relative;
+	background-color: rgb(237, 242, 254);
+	border-radius: 0.75rem;
+	padding: 1rem;
+	box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+	overflow: hidden;
+}
+
+.challenge-box-tag {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 0.75rem;
+	top: 10px;
+	left: -30px;
+	width: 120px;
+	height: 30px;
+	rotate: -45deg;
+	z-index: 10;
+	transform: translateZ(0);
+	color: var(--white);
+}

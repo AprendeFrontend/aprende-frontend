@@ -1,0 +1,76 @@
+.challenge-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  width: 100%;
+  margin-inline: auto;
+  margin-bottom: 5rem;
+}
+
+@media screen and (width>1400px) {
+  .challenge-page {
+    align-items: start;
+    margin-bottom: 10rem;
+  }
+}
+
+.challenge-page-info {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem;
+}
+
+@media screen and (width>1400px) {
+  .challenge-page-info {
+    flex-direction: row;
+    align-items: start;
+    gap: 2rem;
+    padding: 0;
+  }
+}
+
+.challenge-page-title {
+  font-size: 2rem;
+  margin-top: 0;
+}
+
+.challenge-page-text {
+  font-size: 1.25rem;
+  line-height: 30px;
+  margin-bottom: 0;
+}
+
+.challenge-page-image {
+  width: 600px;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media screen and (width>1400px) {
+  .challenge-page-image {
+    width: 650px;
+  }
+}
+
+.challenge-page-skills {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.challenge-page-footer {
+  text-align: center;
+}
+
+@media screen and (width>1400px) {
+  .challenge-page-footer {
+    text-align: left;
+  }
+}
+
+.button-back {
+  margin-bottom: 2rem;
+}
