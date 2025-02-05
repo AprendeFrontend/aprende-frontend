@@ -1,7 +1,6 @@
 import styles from './social.module.css';
 
 const Social = () => {
-  console.log(styles);
   return (
     <ul className={styles['social']}>
       <li className={styles['social-item']}>
