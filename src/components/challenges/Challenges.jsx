@@ -4,7 +4,7 @@ import { CHALLENGES } from '../../constants/challenges';
 import { TECHNOLOGIES } from '../../constants/technologies';
 import Button from '../button/Button';
 import Footer from '../footer/Footer';
-import './challenges.css';
+import styles from './challenges.module.css';
 
 const buttons = ['Todos los retos', 'HTML - CSS', 'JavaScript'];
 
@@ -14,7 +14,7 @@ const Challenges = () => {
 
   return (
     <>
-      <div className='filters'>
+      <div className={styles['filters']}>
         {buttons.map((label, index) => (
           <Button key={label} className={`${active === index ? 'button-active' : 'button-ghost'}`} onClick={() => setActive(index)}>
             {label}
@@ -22,11 +22,11 @@ const Challenges = () => {
         ))}
       </div>
 
-      <div className='challenges'>
+      <div className={styles['challenges']}>
         {filteredChallenges.map(challenge => (
           <a key={challenge.id} href={`/challenge/${challenge.id}`}>
-            <div className='challenge-box'>
-              <span className='challenge-box-tag' style={{ backgroundColor: `var(${challenge.color})` }}>
+            <div className={styles['challenge-box']}>
+              <span className={styles['challenge-box-tag']} style={{ backgroundColor: `var(${challenge.color})` }}>
                 Level {challenge.level}
               </span>
               <img src={challenge.image} alt={challenge.name} />

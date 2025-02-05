@@ -13,7 +13,6 @@
 }
 
 .challenges {
-  background-color: red;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 400px));
   grid-template-rows: repeat(3, min-content);
@@ -22,8 +21,14 @@
   margin-inline: auto;
   margin-bottom: 3rem;
   padding-inline: 1rem;
-  max-width: 1400px;
+
   min-height: 80vh;
+}
+
+@media screen and (width>768px) {
+  .challenges {
+    max-width: 1400px;
+  }
 }
 
 @media screen and (width>1400px) {
