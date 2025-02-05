@@ -1,0 +1,53 @@
+.buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+@media screen and (width>1024px) {
+  .buttons {
+    justify-content: start;
+  }
+}
+
+.button {
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: transparent;
+  color: var(--white);
+  font-size: 1rem;
+  width: max-content;
+  font-weight: bold;
+}
+
+@media screen and (width>1024px) {
+  .button {
+    padding: 1rem 1.25rem;
+    font-size: 1.25rem;
+  }
+}
+
+.button-primary {
+  background: var(--primary);
+}
+
+.button-secondary {
+  background-color: var(--secondary);
+}
+
+.button-white {
+  background-color: var(--white);
+  color: var(--discord);
+}
+
+.button-ghost {
+  color: var(--primary);
+  border: 1px solid var(--primary);
+}
+
+.button-active {
+  background-color: var(--primary);
+  color: var(--white);
+}

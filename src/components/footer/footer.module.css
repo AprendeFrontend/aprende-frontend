@@ -1,0 +1,20 @@
+.footer {
+  position: relative;
+  padding: 3rem 0;
+  background-color: var(--dark);
+  color: #fff;
+  text-align: center;
+}
+
+.footer-wave {
+  position: absolute;
+  top: 1px;
+  translate: 0 -100%;
+  width: 100%;
+}
+
+@media screen and (width>1400px) {
+  .footer {
+    padding: 1rem 0;
+  }
+}

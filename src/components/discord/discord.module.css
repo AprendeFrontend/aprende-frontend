@@ -1,0 +1,44 @@
+.discord-container {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  padding-bottom: 5rem;
+  background-color: var(--discord);
+  color: var(--white);
+  text-align: center;
+}
+
+@media screen and (width>1400px) {
+  .discord-container {
+    flex-direction: row-reverse;
+    padding: 2rem 10rem;
+    padding-bottom: 10rem;
+    text-align: left;
+  }
+}
+
+.discord-logo {
+  max-width: 200px;
+  margin-inline: auto;
+}
+
+.discord-title {
+  font-size: 2rem;
+}
+
+.discord-text {
+  font-size: 1.25rem;
+  line-height: 30px;
+}
+
+@media screen and (width>1400px) {
+  .discord-title {
+    font-size: 2.25rem;
+  }
+
+  .discord-text {
+    font-size: 1.75rem;
+    line-height: 40px;
+    max-width: 50ch;
+  }
+}

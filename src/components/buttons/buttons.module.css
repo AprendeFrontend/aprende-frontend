@@ -1,0 +1,12 @@
+.buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+@media screen and (width>1024px) {
+  .buttons {
+    justify-content: start;
+  }
+}

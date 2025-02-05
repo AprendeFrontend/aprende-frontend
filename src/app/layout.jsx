@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono } from 'next/font/google';
+import Footer from '@/components/footer/Footer';
 import './globals.css';
 import { AuthProvider } from '@/providers/AuthProvider';
 
@@ -13,6 +13,7 @@ export default function RootLayout({ children }) {
     <html lang='en'>
       <body>
         <AuthProvider>{children}</AuthProvider>
+        <Footer />
       </body>
     </html>
   );
