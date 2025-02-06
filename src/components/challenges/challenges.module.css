@@ -21,14 +21,9 @@
   margin-inline: auto;
   margin-bottom: 3rem;
   padding-inline: 1rem;
-
+  width: 100%;
+  max-width: 1400px;
   min-height: 80vh;
-}
-
-@media screen and (width>768px) {
-  .challenges {
-    max-width: 1400px;
-  }
 }
 
 @media screen and (width>1400px) {
