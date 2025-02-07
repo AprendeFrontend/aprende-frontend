@@ -87,12 +87,13 @@
     max-width: 1400px;
     width: 100%;
     padding-inline: 0;
-    gap: 2rem;
+    /* gap: 2rem; */
   }
 }
 
 .challenge-guide {
   font-size: 1.125rem;
+  max-width: 650px;
 }
 
 .challenge-guide-title {
@@ -112,6 +113,7 @@
 }
 
 .delivery-form {
+  margin-top: 1.25rem;
   padding: 2rem;
   width: 100%;
   flex: 1;
@@ -128,13 +130,15 @@
 
 .delivery-form-input {
   height: 40px;
-  margin-bottom: 1.5rem;
   padding-left: 1rem;
+  margin-bottom: 0.5rem;
   border-radius: 0.5rem;
   border: none;
   border: 1px solid rgb(0 0 0 / 0.5);
   background-color: transparent;
 }
 
-.delivery-form-field-info {
+.delivery-form-error {
+  color: var(--error);
+  margin-bottom: 1.5rem;
 }

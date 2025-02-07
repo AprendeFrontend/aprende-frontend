@@ -14,11 +14,12 @@ import styles from './challenge-page.module.css';
 
 const ChallengePage = () => {
   const [viewForm, setViewForm] = useState(false);
-  const { user, login, loading } = useAuth();
+  const [formErrors, setFormErrors] = useState({ username: false, githubURL: false, liveURL: false });
+  console.log(formErrors);
+  const { user, login } = useAuth();
   const { id } = useParams();
   const userStartProject = user?.projects.find(project => project.id === id);
   const challenge = CHALLENGES.find(challenge => challenge.id === id);
-  // if (loading) return <h2>Loading...</h2>;
   return (
     <>
       <Header title={challenge.name} text={challenge.headerDescription} />
@@ -92,7 +93,7 @@ const ChallengePage = () => {
               </Button>
             </div>
             {viewForm && (
-              <form className={styles['delivery-form']} onSubmit={event => handleSubmit(event, id, user.uid)}>
+              <form className={styles['delivery-form']} onSubmit={event => handleSubmit(event, id, user.uid, setFormErrors)}>
                 <div className={styles['delivery-form-field']}>
                   <label htmlFor='username' className={styles['delivery-form-label']}>
                     Nombre de Usuario
@@ -104,6 +105,7 @@ const ChallengePage = () => {
                     placeholder='e.g. doriandesings'
                     className={styles['delivery-form-input']}
                   />
+                  {formErrors.username && <span className={styles['delivery-form-error']}>Introduce el nombre de usuario</span>}
                 </div>
                 <div className={styles['delivery-form-field']}>
                   <label htmlFor='github-url' className={styles['delivery-form-label']}>
@@ -116,6 +118,7 @@ const ChallengePage = () => {
                     placeholder='e.g. https://github.com/doriandesings'
                     className={styles['delivery-form-input']}
                   />
+                  {formErrors.githubURL && <span className={styles['delivery-form-error']}>Introduce la URL de tu repositorio</span>}
                 </div>
                 <div className={styles['delivery-form-field']}>
                   <label htmlFor='live-url' className={styles['delivery-form-label']}>
@@ -128,6 +131,7 @@ const ChallengePage = () => {
                     placeholder='e.g. https://doriandesings.github.io/qr-code'
                     className={styles['delivery-form-input']}
                   />
+                  {formErrors.githubURL && <span className={styles['delivery-form-error']}>Introduce la URL de tu vista en vivo</span>}
                 </div>
                 <Buttons>
                   <Button className='button-primary'>Enviar</Button>
@@ -165,11 +169,19 @@ const startChallenge = async (id, userId) => {
   }
 };
 
-const handleSubmit = async (event, id, userId) => {
+const handleSubmit = async (event, id, userId, setFormErrors) => {
   event.preventDefault();
   const username = event.target.username.value;
   const githubURL = event.target.githubUrl.value;
   const liveURL = event.target.liveUrl.value;
+
+  setFormErrors({
+    username: !username,
+    githubURL: !githubURL,
+    liveURL: !liveURL
+  });
+
+  if (!username || !githubURL || !liveURL) return;
 
   try {
     const userRef = doc(usersCollectionReference, userId);

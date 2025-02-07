@@ -5,10 +5,12 @@ import styles from './header.module.css';
 
 import { useAuth } from '@/providers/AuthProvider';
 import Link from 'next/link';
+import { useState } from 'react';
 import Hero from '../hero/Hero';
 
 const Header = ({ className = '', children, ...props }) => {
   const { user, logout, login, loading } = useAuth();
+  const [menuOpen, setMenuOpen] = useState(false);
   const headerStyles = styles[className];
   const { title, text, image } = props;
 
@@ -20,15 +22,28 @@ const Header = ({ className = '', children, ...props }) => {
             <img className={styles.logo} src='/assets/icons/logo.svg' alt='logo' />
           </Link>
           {!loading && user && (
-            <div>
-              <p className={styles['user-name']}>{user.displayName || 'Usuario'}</p>
-              <button onClick={logout}>Cerrar Sesión</button>
+            <div className={styles['login-container']}>
+              <img className={styles['login-image']} src={user.photoURL} alt='Imagen de usuario' onClick={() => setMenuOpen(!menuOpen)} />
             </div>
           )}
           {!loading && !user && (
-            <Button className='button-primary' onClick={login}>
-              Iniciar Sesión
+            <Button className='button-github button-hover' onClick={login}>
+              Iniciar Sesión Con Github
+              <img className={styles['icon-github']} src='/assets/icons/github.svg' alt='' />
             </Button>
+          )}
+          {menuOpen && (
+            <div className={styles['header-logout-container']}>
+              <button
+                className={styles['header-logout']}
+                onClick={() => {
+                  logout();
+                  setMenuOpen(false);
+                }}
+              >
+                Cerrar Sesión
+              </button>
+            </div>
           )}
         </div>
       </div>

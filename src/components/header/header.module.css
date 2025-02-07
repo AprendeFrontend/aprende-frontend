@@ -21,6 +21,7 @@
 }
 
 .top-bar-content {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -31,7 +32,7 @@
 
 @media screen and (width>=1024px) {
   .top-bar-content {
-    padding: 2rem 5rem;
+    padding: 1rem 5rem;
   }
 }
 
@@ -43,6 +44,18 @@
   .logo {
     width: 75px;
   }
+}
+
+.login-container {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-image {
+  width: 50px;
+  border-radius: 50%;
 }
 
 .header-wave {
@@ -65,8 +78,16 @@
   }
 }
 
-@media screen and (width>=1400px) {
-  .header-small .header-wave {
-    bottom: 75px;
-  }
+.icon-github {
+  width: 30px;
+}
+
+.header-logout-container {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  right: -50px;
+  top: 0;
+  background-color: var(--white);
+  height: 80px;
 }

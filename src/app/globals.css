@@ -2,12 +2,16 @@
   --white: #f0f9ff;
   --dark: #1a222f;
   --primary: #008ccf;
+  --primary-light: #dee8ff;
+  --primary-hover: #90b1ff;
   --secondary: #404e64;
   --discord: #2b3dfe;
   --trainee: #146c00;
   --junior: #3352a5;
   --middle: #b16c1d;
   --error: #ef474a;
+  --success: #02ae22;
+  --github: #24292e;
 }
 *,
 *::after,

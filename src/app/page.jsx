@@ -1,4 +1,3 @@
-'use client';
 import Button from '@/components/button/Button';
 import Discord from '@/components/discord/Discord';
 import Footer from '@/components/footer/Footer';
@@ -12,7 +11,7 @@ export default function Home() {
     <>
       <div className={styles.page}>
         <Header
-          title='Aprende Frontend'
+          title='Aprende Frontend GRATIS'
           text='Aprender a programar es más efectivo cuando sigues un camino claro y estructurado. Aquí encontrarás retos diseñados para guiarte paso a paso que pondrán a prueba tus habilidades'
           image='/assets/images/hero-home.svg'
         >
@@ -22,8 +21,8 @@ export default function Home() {
         </Header>
         <Row
           image='/assets/images/home-road.svg'
-          title='Un Camino Claro hacia el Éxito'
-          text='Olvídate del caos de aprender al azar. Aquí te guiamos con retos organizados de forma progresiva, dándote una ruta para que domines cada concepto antes de pasar al siguiente nivel.'
+          title='Recibe feedback GRATIS'
+          text='Corregiré tus desafíos en vivo y te daré consejos profesionales personalizados.Entrega tus desafíos y los corregiré en vivo, señalando errores, dándote consejos prácticos y explicándote cómo mejorar.'
         />
         <Row
           className='row-content-reverse'
