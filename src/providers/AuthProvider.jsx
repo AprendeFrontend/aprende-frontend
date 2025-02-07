@@ -3,7 +3,7 @@ import { AuthContext } from '@/contexts/AuthContext';
 import { GithubAuthProvider, signInWithPopup, signOut } from 'firebase/auth';
 import { doc, getDoc, onSnapshot, serverTimestamp, setDoc } from 'firebase/firestore';
 import { useContext, useEffect, useState } from 'react';
-import { auth, db } from '../config/firebase.config';
+import { auth, usersCollectionReference } from '../config/firebase.config';
 
 // Proveedor del contexto
 export const AuthProvider = ({ children }) => {
@@ -20,9 +20,9 @@ export const AuthProvider = ({ children }) => {
         return;
       }
 
-      const userRef = doc(db, 'users', user.uid);
+      const userRef = doc(usersCollectionReference, user.uid);
       unsubscribeUser = onSnapshot(userRef, docSnapshot => {
-        setUser(docSnapshot.exists() ? { ...user, ...docSnapshot.data() } : user);
+        setUser(docSnapshot.exists() ? { ...docSnapshot.data(), uid: user.uid } : { uid: user.uid });
         setLoading(false);
       });
     });
@@ -38,7 +38,7 @@ export const AuthProvider = ({ children }) => {
 
 const saveUserIfNotExists = async user => {
   try {
-    const userRef = doc(db, 'users', user.uid);
+    const userRef = doc(usersCollectionReference, user.uid);
     const userSnap = await getDoc(userRef);
 
     if (userSnap.exists()) return;

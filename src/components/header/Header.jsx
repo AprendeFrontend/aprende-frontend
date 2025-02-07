@@ -4,10 +4,11 @@ import Button from '../button/Button';
 import styles from './header.module.css';
 
 import { useAuth } from '@/providers/AuthProvider';
+import Link from 'next/link';
 import Hero from '../hero/Hero';
 
 const Header = ({ className = '', children, ...props }) => {
-  const { user, logout, login } = useAuth();
+  const { user, logout, login, loading } = useAuth();
   const headerStyles = styles[className];
   const { title, text, image } = props;
 
@@ -15,17 +16,16 @@ const Header = ({ className = '', children, ...props }) => {
     <header {...props} className={`${styles.header} ${headerStyles}`}>
       <div className={styles['top-bar']}>
         <div className={styles['top-bar-content']}>
-          <a href='/'>
+          <Link href='/'>
             <img className={styles.logo} src='/assets/icons/logo.svg' alt='logo' />
-          </a>
-          {user && (
+          </Link>
+          {!loading && user && (
             <div>
               <p className={styles['user-name']}>{user.displayName || 'Usuario'}</p>
               <button onClick={logout}>Cerrar Sesión</button>
             </div>
           )}
-
-          {!user && (
+          {!loading && !user && (
             <Button className='button-primary' onClick={login}>
               Iniciar Sesión
             </Button>

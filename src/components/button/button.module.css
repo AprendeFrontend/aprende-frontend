@@ -20,6 +20,8 @@
   font-size: 1rem;
   width: max-content;
   font-weight: bold;
+  cursor: pointer;
+  transition: scale 0.2s;
 }
 
 @media screen and (width>1024px) {
@@ -50,4 +52,15 @@
 .button-active {
   background-color: var(--primary);
   color: var(--white);
+}
+
+.button-ghost-error {
+  color: var(--error);
+  border: 1px solid var(--error);
+}
+
+@media (hover: hover) {
+  .button-hover:hover {
+    scale: 1.05;
+  }
 }

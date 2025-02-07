@@ -7,7 +7,7 @@
   --trainee: #146c00;
   --junior: #3352a5;
   --middle: #b16c1d;
-  --red: #ef474a;
+  --error: #ef474a;
 }
 *,
 *::after,
@@ -27,13 +27,10 @@ nav ul {
   margin-bottom: 0;
 }
 
-ul {
-  padding-left: 1rem;
-}
-
 a {
   text-decoration: none;
   color: inherit;
+  cursor: pointer;
 }
 
 body {

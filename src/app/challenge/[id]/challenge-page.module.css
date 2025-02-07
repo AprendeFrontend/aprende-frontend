@@ -61,16 +61,80 @@
   font-size: 1.25rem;
 }
 
-.challenge-page-footer {
+.challenge-page-user-actions {
   text-align: center;
 }
 
 @media screen and (width>1400px) {
-  .challenge-page-footer {
+  .challenge-page-user-actions {
     text-align: left;
   }
 }
 
 .button-back {
   margin-bottom: 2rem;
+}
+
+.challenge-footer {
+  display: flex;
+  flex-direction: column;
+  padding-inline: 2rem;
+}
+
+@media screen and (width>1400px) {
+  .challenge-footer {
+    flex-direction: row;
+    max-width: 1400px;
+    width: 100%;
+    padding-inline: 0;
+    gap: 2rem;
+  }
+}
+
+.challenge-guide {
+  font-size: 1.125rem;
+}
+
+.challenge-guide-title {
+  font-size: 2rem;
+}
+
+.challenge-guide-text {
+}
+
+.challenge-guide-list {
+  margin-block: 0;
+  margin-bottom: 1rem;
+}
+
+.challenge-guide-list-item {
+  margin-bottom: 0.5rem;
+}
+
+.delivery-form {
+  padding: 2rem;
+  width: 100%;
+  flex: 1;
+}
+
+.delivery-form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.delivery-form-label {
+  margin-bottom: 0.5rem;
+}
+
+.delivery-form-input {
+  height: 40px;
+  margin-bottom: 1.5rem;
+  padding-left: 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  border: 1px solid rgb(0 0 0 / 0.5);
+  background-color: transparent;
+}
+
+.delivery-form-field-info {
 }

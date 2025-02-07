@@ -80,5 +80,42 @@ const GUESS_THE_NUMBER = {
   technology: TECHNOLOGIES.JAVASCRIPT,
   color: '--trainee'
 };
+const FORM_VALIDATE = {
+  id: '106c7528-77a9-4e65-ad36-d1b5e8bd9250',
+  name: 'Form Validate',
+  headerDescription:
+    'Formulario de validación de contraseñas que verifica requisitos mínimos como caracteres especiales, números y letras mayúsculas.',
+  pageDescription:
+    'En este primer desafío tendrás que maquetar un formulario de validación de contraseñas donde podrás practicar, entre otras propiedades:',
+  skills: ['Margin', 'Padding', 'Border radius', 'Imágenes', 'Fuentes', 'Background-color'],
+  suggestions: [
+    'Variables CSS para guardar los colores, los tamaños y los pesos de las fuentes.',
+    'Importar las fuentes en el HTML y no en el CSS'
+  ],
+  restrictions: ['No se puede usar ningún tipo de framework y/o librería.', 'No está permitido el uso de flexbox ni de grid.'],
+  image: '/assets/images/challenges/form-validate.jpg',
+  link: 'https://github.com/AprendeFrontend/smartwatch-interface/archive/refs/heads/main.zip',
+  level: LEVELS.JUNIOR,
+  technology: TECHNOLOGIES.JAVASCRIPT,
+  color: '--junior'
+};
 
-export { ADVANCED_PASSWORD_GENERATOR, BLACK_PLATE, GUESS_THE_NUMBER, SIMPLE_PASSWORD_GENERATOR };
+const MEMORY_GAME = {
+  id: '91e4f748-319c-4999-8798-fddfe551bce1',
+  name: 'Memory Game',
+  headerDescription: 'Memory game donde el jugador tendrá que revelar las tarjetas y encontrar las imágenes que coinciden.',
+  pageDescription: 'En este desafío tendrás que maquetar un juego de encontrar parejas donde podrás practicar, entre otras propiedades:',
+  skills: ['Margin', 'Padding', 'Border radius', 'Imágenes', 'Fuentes', 'Background-color'],
+  suggestions: [
+    'Variables CSS para guardar los colores, los tamaños y los pesos de las fuentes.',
+    'Importar las fuentes en el HTML y no en el CSS'
+  ],
+  restrictions: ['No se puede usar ningún tipo de framework y/o librería.', 'No está permitido el uso de flexbox ni de grid.'],
+  image: '/assets/images/challenges/memory-game.jpg',
+  link: 'https://github.com/AprendeFrontend/smartwatch-interface/archive/refs/heads/main.zip',
+  level: LEVELS.JUNIOR,
+  technology: TECHNOLOGIES.JAVASCRIPT,
+  color: '--junior'
+};
+
+export { ADVANCED_PASSWORD_GENERATOR, BLACK_PLATE, FORM_VALIDATE, GUESS_THE_NUMBER, MEMORY_GAME, SIMPLE_PASSWORD_GENERATOR };

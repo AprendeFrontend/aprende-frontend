@@ -9,10 +9,7 @@ const PRICE_TABLES = {
   pageDescription:
     'En este primer desafío tendrás que maquetar una pequeña tarjeta con un código QR donde podrás practicar, entre otras propiedades:',
   skills: ['Margin', 'Padding', 'Border radius', 'Imágenes', 'Fuentes', 'Background-color'],
-  suggestions: [
-    'Variables CSS para guardar los colores, los tamaños y los pesos de las fuentes.',
-    'Importar las fuentes en el HTML y no en el CSS'
-  ],
+  suggestions: ['Variables CSS para guardar datos que repitas.', 'Importar las fuentes en el HTML y no en el CSS'],
   restrictions: ['No se puede usar ningún tipo de framework y/o librería.', 'No está permitido el uso de flexbox ni de grid.'],
   image: '/assets/images/challenges/price-tables.jpg',
   link: 'https://github.com/AprendeFrontend/price-tables/archive/refs/heads/main.zip',

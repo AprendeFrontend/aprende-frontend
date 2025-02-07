@@ -12,6 +12,13 @@
   cursor: pointer;
 }
 
+.progress {
+  max-width: 1250px;
+  margin-inline: auto;
+  width: 100%;
+  text-align: right;
+}
+
 .challenges {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 400px));
@@ -37,8 +44,16 @@
   background-color: rgb(237, 242, 254);
   border-radius: 0.75rem;
   padding: 1rem;
-  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   overflow: hidden;
+  transition: background-color 0.3s, scale 0.3s;
+}
+
+@media (hover: hover) {
+  .challenge-box:hover {
+    background-color: rgb(251, 251, 251);
+    scale: 1.05;
+  }
 }
 
 .challenge-box-tag {

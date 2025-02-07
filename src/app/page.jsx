@@ -1,17 +1,13 @@
 'use client';
 import Button from '@/components/button/Button';
-import Buttons from '@/components/buttons/Buttons';
 import Discord from '@/components/discord/Discord';
 import Footer from '@/components/footer/Footer';
 import Header from '@/components/header/Header';
 import Row from '@/components/row/Row';
-import { useAuth } from '@/providers/AuthProvider';
 import Link from 'next/link';
 import styles from './page.module.css';
 
 export default function Home() {
-  const { loading, user } = useAuth();
-  if (loading) return <h2>Loading...</h2>;
   return (
     <>
       <div className={styles.page}>
@@ -20,19 +16,9 @@ export default function Home() {
           text='Aprender a programar es más efectivo cuando sigues un camino claro y estructurado. Aquí encontrarás retos diseñados para guiarte paso a paso que pondrán a prueba tus habilidades'
           image='/assets/images/hero-home.svg'
         >
-          {!user && (
-            <Buttons>
-              <Button className='button-primary'>Empieza a aprender</Button>
-              <Link href='/challenges'>
-                <Button className='button-secondary'>Ver Desafíos</Button>
-              </Link>
-            </Buttons>
-          )}
-          {user && (
-            <a href='/challenges'>
-              <Button className='button-primary'>Ver Desafíos</Button>
-            </a>
-          )}
+          <Link href='/challenges'>
+            <Button className='button-primary button-hover'>Ver Desafíos</Button>
+          </Link>
         </Header>
         <Row
           image='/assets/images/home-road.svg'
