@@ -27,8 +27,8 @@ const CREDIT_CARDS = {
   headerDescription:
     'Diseño de tres tarjetas de crédito estilizadas: degradados vivos, disposición horizontal, fondo claro, logotipo, titular y número destacados.',
   pageDescription:
-    'En este primer desafío tendrás que maquetar una pequeña tarjeta con un código QR donde podrás practicar, entre otras propiedades:',
-  skills: ['Margin', 'Padding', 'Border radius', 'Imágenes', 'Fuentes', 'Background-color'],
+    'En este desafío tendrás que maquetar 3 tarjetas de crédito donde sólo tienes disponible el logo de cada tarjeta, entre otras propiedades:',
+  skills: ['Position', 'Degradados', 'Imágenes', 'Fuentes'],
   suggestions: [
     'Variables CSS para guardar los colores, los tamaños y los pesos de las fuentes.',
     'Importar las fuentes en el HTML y no en el CSS'

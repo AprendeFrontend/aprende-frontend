@@ -60,7 +60,9 @@ const ChallengePage = () => {
                   <p>
                     <b>Desafío comenzado el {userStartProject.startDate}</b>
                   </p>
-                  <Button className='button-primary'>Descargar material inicial</Button>
+                  <a href={challenge.link}>
+                    <Button className='button-primary'>Descargar material inicial</Button>
+                  </a>
                 </>
               )}
             </div>
