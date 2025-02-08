@@ -1,24 +1,24 @@
 import { LEVELS } from '../levels';
 import { TECHNOLOGIES } from '../technologies';
 
-const BLACK_PLATE = {
-  id: '96882f60-4145-4f81-901a-e6ad8d108f44',
-  name: 'Black Plate',
+const GUESS_THE_NUMBER = {
+  id: '6a7bcf01-d912-482f-8d35-b2e915c78902',
+  name: 'Guess the Number',
   headerDescription:
-    'Diseño elegante: interfaz oscura con detalles dorados, ideal para restaurantes gourmet. Dos secciones principales para navegación intuitiva.',
+    'Interfaz de juego interactivo: fondo geométrico claro, tarjeta central oscura, título "GUESS THE NUMBER" y números interactivos destacados.',
   pageDescription:
-    'En este primer desafío tendrás que maquetar una pequeña tarjeta con un código QR donde podrás practicar, entre otras propiedades:',
-  skills: ['Margin', 'Padding', 'Border radius', 'Imágenes', 'Fuentes', 'Background-color'],
+    'En este desafío tendrás que realizar un juego interactivo donde adivinarás un número que se genera de forma aleatoria, podrás practicar entre otras cosas:',
+  skills: ['DOM', 'Generación Aleatoria', 'Eventos', 'Funciones'],
   suggestions: [
     'Variables CSS para guardar los colores, los tamaños y los pesos de las fuentes.',
     'Importar las fuentes en el HTML y no en el CSS'
   ],
-  restrictions: ['No se puede usar ningún tipo de framework y/o librería.', 'No está permitido el uso de flexbox ni de grid.'],
-  image: '/assets/images/challenges/black-plate.jpg',
-  requirements: 'Hazlo Bien',
-  level: LEVELS.MIDDLE,
+  restrictions: ['No se puede usar ningún tipo de framework y/o librería.'],
+  image: '/assets/images/challenges/guess-the-number.jpg',
+  requirements: 'Interfaz responsiva y lógica básica de interacción',
+  level: LEVELS.TRAINEE,
   technology: TECHNOLOGIES.JAVASCRIPT,
-  color: '--middle'
+  color: '--trainee'
 };
 
 const SIMPLE_PASSWORD_GENERATOR = {
@@ -27,13 +27,13 @@ const SIMPLE_PASSWORD_GENERATOR = {
   headerDescription:
     'Interfaz moderna para generar contraseñas: tonos oscuros con degradados morados, diseño funcional, profesional y visualmente atractivo.',
   pageDescription:
-    'En este primer desafío tendrás que maquetar una pequeña tarjeta con un código QR donde podrás practicar, entre otras propiedades:',
-  skills: ['Margin', 'Padding', 'Border radius', 'Imágenes', 'Fuentes', 'Background-color'],
+    'En este desafío tendrás que desarrollar un generador de contraseñas en base a su longitud, podrás practicar, entre otras cosas:',
+  skills: ['DOM', 'Eventos', 'Strings'],
   suggestions: [
     'Variables CSS para guardar los colores, los tamaños y los pesos de las fuentes.',
     'Importar las fuentes en el HTML y no en el CSS'
   ],
-  restrictions: ['No se puede usar ningún tipo de framework y/o librería.', 'No está permitido el uso de flexbox ni de grid.'],
+  restrictions: ['No se puede usar ningún tipo de framework y/o librería.'],
   image: '/assets/images/challenges/simple-password-generator.jpg',
   requirements: 'Interfaz responsiva y generación de contraseñas seguras',
   level: LEVELS.TRAINEE,
@@ -61,25 +61,6 @@ const ADVANCED_PASSWORD_GENERATOR = {
   color: '--junior'
 };
 
-const GUESS_THE_NUMBER = {
-  id: '6a7bcf01-d912-482f-8d35-b2e915c78902',
-  name: 'Guess the Number',
-  headerDescription:
-    'Interfaz de juego interactivo: fondo geométrico claro, tarjeta central oscura, título "GUESS THE NUMBER" y números interactivos destacados.',
-  pageDescription:
-    'En este primer desafío tendrás que maquetar una pequeña tarjeta con un código QR donde podrás practicar, entre otras propiedades:',
-  skills: ['Margin', 'Padding', 'Border radius', 'Imágenes', 'Fuentes', 'Background-color'],
-  suggestions: [
-    'Variables CSS para guardar los colores, los tamaños y los pesos de las fuentes.',
-    'Importar las fuentes en el HTML y no en el CSS'
-  ],
-  restrictions: ['No se puede usar ningún tipo de framework y/o librería.', 'No está permitido el uso de flexbox ni de grid.'],
-  image: '/assets/images/challenges/guess-the-number.jpg',
-  requirements: 'Interfaz responsiva y lógica básica de interacción',
-  level: LEVELS.TRAINEE,
-  technology: TECHNOLOGIES.JAVASCRIPT,
-  color: '--trainee'
-};
 const FORM_VALIDATE = {
   id: '106c7528-77a9-4e65-ad36-d1b5e8bd9250',
   name: 'Form Validate',
@@ -116,6 +97,26 @@ const MEMORY_GAME = {
   level: LEVELS.JUNIOR,
   technology: TECHNOLOGIES.JAVASCRIPT,
   color: '--junior'
+};
+
+const BLACK_PLATE = {
+  id: '96882f60-4145-4f81-901a-e6ad8d108f44',
+  name: 'Black Plate',
+  headerDescription:
+    'Diseño elegante: interfaz oscura con detalles dorados, ideal para restaurantes gourmet. Dos secciones principales para navegación intuitiva.',
+  pageDescription:
+    'En este primer desafío tendrás que maquetar una pequeña tarjeta con un código QR donde podrás practicar, entre otras propiedades:',
+  skills: ['Margin', 'Padding', 'Border radius', 'Imágenes', 'Fuentes', 'Background-color'],
+  suggestions: [
+    'Variables CSS para guardar los colores, los tamaños y los pesos de las fuentes.',
+    'Importar las fuentes en el HTML y no en el CSS'
+  ],
+  restrictions: ['No se puede usar ningún tipo de framework y/o librería.', 'No está permitido el uso de flexbox ni de grid.'],
+  image: '/assets/images/challenges/black-plate.jpg',
+  requirements: 'Hazlo Bien',
+  level: LEVELS.MIDDLE,
+  technology: TECHNOLOGIES.JAVASCRIPT,
+  color: '--middle'
 };
 
 export { ADVANCED_PASSWORD_GENERATOR, BLACK_PLATE, FORM_VALIDATE, GUESS_THE_NUMBER, MEMORY_GAME, SIMPLE_PASSWORD_GENERATOR };

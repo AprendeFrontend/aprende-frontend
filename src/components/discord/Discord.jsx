@@ -12,7 +12,9 @@ const Discord = () => {
             Tenemos un servidor de discord donde podrás hablar con gente que se está enfrentando a los mismos retos que tu, pregunta dudas,
             comparte tu código y conoce gente que está al mismo nivel que tú.
           </p>
-          <Button className='button-white'>Unirse a Discord</Button>
+          <a href='https://discord.gg/9WzdedkJ64' target='_blank'>
+            <Button className='button-white'>Unirse a Discord</Button>
+          </a>
         </div>
       </div>
     </>
