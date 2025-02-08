@@ -99,12 +99,19 @@ const ChallengePage = () => {
                   </li>
                 ))}
               </ul>
-              <Button className='button-primary' onClick={() => setViewForm(true)}>
-                Realizar Entrega
-              </Button>
+              {!userStartProject?.submitted && (
+                <Button className='button-primary' onClick={() => setViewForm(true)}>
+                  Realizar Entrega
+                </Button>
+              )}
+              {userStartProject?.submitted && (
+                <Button className='button-primary' onClick={() => setViewForm(true)}>
+                  Modificar Entrega
+                </Button>
+              )}
             </div>
             {viewForm && (
-              <form className={styles['delivery-form']} onSubmit={event => handleSubmit(event, id, user.uid, setFormErrors)}>
+              <form className={styles['delivery-form']} onSubmit={event => handleSubmit(event, id, user.uid, setFormErrors, setViewForm)}>
                 <div className={styles['delivery-form-field']}>
                   <label htmlFor='username' className={styles['delivery-form-label']}>
                     Nombre de Usuario
@@ -114,6 +121,7 @@ const ChallengePage = () => {
                     id='username'
                     name='username'
                     placeholder='e.g. doriandesings'
+                    defaultValue={userStartProject.username || ''}
                     className={styles['delivery-form-input']}
                   />
                   {formErrors.username && <span className={styles['delivery-form-error']}>Introduce el nombre de usuario</span>}
@@ -127,6 +135,7 @@ const ChallengePage = () => {
                     id='github-url'
                     name='githubUrl'
                     placeholder='e.g. https://github.com/doriandesings'
+                    defaultValue={userStartProject.githubURL || ''}
                     className={styles['delivery-form-input']}
                   />
                   {formErrors.githubURL && <span className={styles['delivery-form-error']}>Introduce la URL de tu repositorio</span>}
@@ -140,6 +149,7 @@ const ChallengePage = () => {
                     id='live-url'
                     name='liveUrl'
                     placeholder='e.g. https://doriandesings.github.io/qr-code'
+                    defaultValue={userStartProject.liveURL || ''}
                     className={styles['delivery-form-input']}
                   />
                   {formErrors.githubURL && <span className={styles['delivery-form-error']}>Introduce la URL de tu vista en vivo</span>}
@@ -180,19 +190,23 @@ const startChallenge = async (id, userId) => {
   }
 };
 
-const handleSubmit = async (event, id, userId, setFormErrors) => {
+const handleSubmit = async (event, id, userId, setFormErrors, setViewForm) => {
   event.preventDefault();
   const username = event.target.username.value;
   const githubURL = event.target.githubUrl.value;
   const liveURL = event.target.liveUrl.value;
 
+  const githubRegex = /^https?:\/\/(www\.)?github\.com\/[\w-]+\/[\w-]+(\/.*)?$/;
+
+  const isGithubURL = githubRegex.test(githubURL);
+
   setFormErrors({
     username: !username,
-    githubURL: !githubURL,
+    githubURL: !githubURL || !isGithubURL,
     liveURL: !liveURL
   });
 
-  if (!username || !githubURL || !liveURL) return;
+  if (!username || !githubURL || !isGithubURL || !liveURL) return;
 
   try {
     const userRef = doc(usersCollectionReference, userId);
@@ -225,6 +239,7 @@ const handleSubmit = async (event, id, userId, setFormErrors) => {
 
     // Guardar el array actualizado en Firestore
     await updateDoc(userRef, { projects });
+    setViewForm(false);
 
     console.log(`Proyecto ${id} actualizado para el usuario ${userId}`);
   } catch (error) {

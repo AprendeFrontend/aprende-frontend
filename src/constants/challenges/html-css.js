@@ -68,7 +68,7 @@ const PRODUCT_CARD = {
     'Diseño profesional de tarjetas de producto: claro, atractivo y optimizado para móvil y escritorio, garantizando consistencia visual.',
   pageDescription:
     'En este primer desafío tendrás que maquetar una pequeña tarjeta con un código QR donde podrás practicar, entre otras propiedades:',
-  skills: ['Margin', 'Padding', 'Border radius', 'Imágenes', 'Fuentes', 'Background-color'],
+  skills: ['Picture', 'Border radius', 'Imágenes', 'Fuentes', 'Background-color'],
   suggestions: [
     'Usar picture en lugar de background-image para la imagen del producto',
     'Variables CSS para guardar los colores, los tamaños y los pesos de las fuentes.',
