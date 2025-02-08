@@ -7,6 +7,7 @@ import { usersCollectionReference } from '@/config/firebase.config';
 import { CHALLENGES } from '@/constants/challenges';
 import { useAuth } from '@/providers/AuthProvider';
 import { arrayUnion, doc, getDoc, updateDoc } from 'firebase/firestore';
+import Image from 'next/image';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
 import { useState } from 'react';
@@ -28,7 +29,15 @@ const ChallengePage = () => {
           <Button className='button-ghost'>Volver a desafíos</Button>
         </Link>
         <div className={styles['challenge-page-info']}>
-          <img className={styles['challenge-page-image']} src={challenge.image} alt='' />
+          <Image
+            width={650}
+            height={433}
+            className={styles['challenge-page-image']}
+            src={challenge.image}
+            alt=''
+            placeholder='blur'
+            blurDataURL='/assets/images/default-challenge.png'
+          />
           <div>
             <div>
               <h2 className={styles['challenge-page-title']}>{challenge.name}</h2>
