@@ -20,6 +20,7 @@ const Header = ({ className = '', children, ...props }) => {
         <div className={styles['top-bar-content']}>
           <Link href='/'>
             <img className={styles.logo} src='/assets/icons/logo.svg' alt='logo' />
+            <span>Beta 0.5.2</span>
           </Link>
           {!loading && user && (
             <div className={styles['login-container']}>

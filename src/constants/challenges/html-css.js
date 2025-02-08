@@ -61,6 +61,27 @@ const PROFILE_CARD = {
   color: '--trainee'
 };
 
+const PRODUCT_CARD = {
+  id: '321b2fbb-aec8-43d5-9526-5ae14072a312',
+  name: 'Product card',
+  headerDescription:
+    'Diseño profesional de tarjetas de producto: claro, atractivo y optimizado para móvil y escritorio, garantizando consistencia visual.',
+  pageDescription:
+    'En este primer desafío tendrás que maquetar una pequeña tarjeta con un código QR donde podrás practicar, entre otras propiedades:',
+  skills: ['Margin', 'Padding', 'Border radius', 'Imágenes', 'Fuentes', 'Background-color'],
+  suggestions: [
+    'Usar picture en lugar de background-image para la imagen del producto',
+    'Variables CSS para guardar los colores, los tamaños y los pesos de las fuentes.',
+    'Importar las fuentes en el HTML y no en el CSS'
+  ],
+  restrictions: ['No se puede usar ningún tipo de framework y/o librería.'],
+  image: '/assets/images/challenges/product-card.jpg',
+  link: 'https://github.com/AprendeFrontend/product-card/archive/refs/heads/main.zip',
+  level: LEVELS.JUNIOR,
+  technology: TECHNOLOGIES.HTML_CSS,
+  color: '--junior'
+};
+
 const PRICE_TABLES = {
   id: '4b7a9699-1d7f-484e-9eb7-7bddd6018496',
   name: 'Price Tables',
@@ -73,26 +94,6 @@ const PRICE_TABLES = {
   restrictions: ['No se puede usar ningún tipo de framework y/o librería.', 'No está permitido el uso de flexbox ni de grid.'],
   image: '/assets/images/challenges/price-tables.jpg',
   link: 'https://github.com/AprendeFrontend/price-tables/archive/refs/heads/main.zip',
-  level: LEVELS.JUNIOR,
-  technology: TECHNOLOGIES.HTML_CSS,
-  color: '--junior'
-};
-
-const PRODUCT_CARD = {
-  id: '321b2fbb-aec8-43d5-9526-5ae14072a312',
-  name: 'Product card',
-  headerDescription:
-    'Diseño profesional de tarjetas de producto: claro, atractivo y optimizado para móvil y escritorio, garantizando consistencia visual.',
-  pageDescription:
-    'En este primer desafío tendrás que maquetar una pequeña tarjeta con un código QR donde podrás practicar, entre otras propiedades:',
-  skills: ['Margin', 'Padding', 'Border radius', 'Imágenes', 'Fuentes', 'Background-color'],
-  suggestions: [
-    'Variables CSS para guardar los colores, los tamaños y los pesos de las fuentes.',
-    'Importar las fuentes en el HTML y no en el CSS'
-  ],
-  restrictions: ['No se puede usar ningún tipo de framework y/o librería.', 'No está permitido el uso de flexbox ni de grid.'],
-  image: '/assets/images/challenges/product-card.jpg',
-  link: 'https://github.com/AprendeFrontend/product-card/archive/refs/heads/main.zip',
   level: LEVELS.JUNIOR,
   technology: TECHNOLOGIES.HTML_CSS,
   color: '--junior'

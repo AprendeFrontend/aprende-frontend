@@ -1,5 +1,6 @@
 'use client';
 import { useAuth } from '@/providers/AuthProvider';
+import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 import { CHALLENGES } from '../../constants/challenges';
@@ -44,7 +45,15 @@ const Challenges = () => {
                 <span className={styles['challenge-box-tag']} style={{ backgroundColor: `var(${challenge.color})` }}>
                   Nivel {challenge.level}
                 </span>
-                <img className={styles['challenge-image']} src={challenge.image} alt={challenge.name} />
+                <Image
+                  width={368}
+                  height={245}
+                  className={styles['challenge-image']}
+                  src={challenge.image}
+                  alt={challenge.name}
+                  placeholder='blur'
+                  blurDataURL='/default-challenge.png'
+                />
                 <div className={styles['challenge-box-footer']}>
                   <h2 className={styles['challenge-title']}>{challenge.name}</h2>
                   {userStartChallenge && !userFinishedChallenge && <span className={styles['challenge-box-start']}>Iniciado</span>}
