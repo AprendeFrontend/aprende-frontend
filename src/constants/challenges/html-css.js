@@ -102,7 +102,7 @@ const RESPONSIVE_HERO = {
   headerDescription:
     'Sección web moderna y profesional: fondo de bosque oscuro para tranquilidad, esfera de vidrio central para un toque futurista y llamativo.',
   pageDescription: 'En este desafío tendrás que maquetar un hero responsive donde podrás practicar, entre otras cosas:',
-  skills: ['Position', 'Flex', 'Border radius', 'Background-image', 'Pseudoelementos'],
+  skills: ['Position', 'Flex', 'Background-image', 'Pseudoelementos', 'Diseño responsive'],
   suggestions: [
     'Variables CSS para guardar los colores, los tamaños y los pesos de las fuentes.',
     'Importar las fuentes en el HTML y no en el CSS'
