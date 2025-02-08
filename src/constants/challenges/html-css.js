@@ -46,14 +46,13 @@ const PROFILE_CARD = {
   name: 'Profile Card',
   headerDescription:
     'Tarjeta de perfil moderna y minimalista, diseñada para resaltar información clave del usuario como nombre, profesión y estadísticas.',
-  pageDescription:
-    'En este primer desafío tendrás que maquetar una pequeña tarjeta con un código QR donde podrás practicar, entre otras propiedades:',
-  skills: ['Margin', 'Padding', 'Border radius', 'Imágenes', 'Fuentes', 'Background-color'],
+  pageDescription: 'En este desafío tendrás que maquetar una tarjeta de usuario donde podrás practicar, entre otras propiedades:',
+  skills: ['Margin', 'Padding', 'Border radius', 'Imágenes', 'Fuentes', 'Degradados'],
   suggestions: [
     'Variables CSS para guardar los colores, los tamaños y los pesos de las fuentes.',
     'Importar las fuentes en el HTML y no en el CSS'
   ],
-  restrictions: ['No se puede usar ningún tipo de framework y/o librería.', 'No está permitido el uso de flexbox ni de grid.'],
+  restrictions: ['No se puede usar ningún tipo de framework y/o librería.', 'No está permitido el uso position.'],
   image: '/assets/images/challenges/profile-card.jpg',
   link: 'https://github.com/AprendeFrontend/profile-card/archive/refs/heads/main.zip',
   level: LEVELS.TRAINEE,
@@ -66,15 +65,14 @@ const PRODUCT_CARD = {
   name: 'Product card',
   headerDescription:
     'Diseño profesional de tarjetas de producto: claro, atractivo y optimizado para móvil y escritorio, garantizando consistencia visual.',
-  pageDescription:
-    'En este primer desafío tendrás que maquetar una pequeña tarjeta con un código QR donde podrás practicar, entre otras propiedades:',
-  skills: ['Picture', 'Border radius', 'Imágenes', 'Fuentes', 'Background-color'],
+  pageDescription: 'En este desafío tendrás que maquetar una tarjeta de producto donde podrás practicar, entre otras cosas:',
+  skills: ['Picture', 'Border radius', 'Imágenes', 'Fuentes'],
   suggestions: [
     'Usar picture en lugar de background-image para la imagen del producto',
     'Variables CSS para guardar los colores, los tamaños y los pesos de las fuentes.',
     'Importar las fuentes en el HTML y no en el CSS'
   ],
-  restrictions: ['No se puede usar ningún tipo de framework y/o librería.'],
+  restrictions: ['No se puede usar ningún tipo de framework y/o librería.', 'No está permitido el uso position.'],
   image: '/assets/images/challenges/product-card.jpg',
   link: 'https://github.com/AprendeFrontend/product-card/archive/refs/heads/main.zip',
   level: LEVELS.JUNIOR,
@@ -87,11 +85,10 @@ const PRICE_TABLES = {
   name: 'Price Tables',
   headerDescription:
     'Diseño moderno de tablas de precios: limpio, claro y comparativo. Elementos visuales guían al usuario a elegir la mejor opción.',
-  pageDescription:
-    'En este primer desafío tendrás que maquetar una pequeña tarjeta con un código QR donde podrás practicar, entre otras propiedades:',
-  skills: ['Margin', 'Padding', 'Border radius', 'Imágenes', 'Fuentes', 'Background-color'],
+  pageDescription: 'En este desafío tendrás que maquetar unas tablas de precios donde podrás practicar, entre otras cosas:',
+  skills: ['Position', 'Border radius', 'Imágenes', 'Fuentes', 'Flex', 'Reutilización de código'],
   suggestions: ['Variables CSS para guardar datos que repitas.', 'Importar las fuentes en el HTML y no en el CSS'],
-  restrictions: ['No se puede usar ningún tipo de framework y/o librería.', 'No está permitido el uso de flexbox ni de grid.'],
+  restrictions: ['No se puede usar ningún tipo de framework y/o librería.'],
   image: '/assets/images/challenges/price-tables.jpg',
   link: 'https://github.com/AprendeFrontend/price-tables/archive/refs/heads/main.zip',
   level: LEVELS.JUNIOR,
@@ -104,14 +101,13 @@ const RESPONSIVE_HERO = {
   name: 'Responsive hero',
   headerDescription:
     'Sección web moderna y profesional: fondo de bosque oscuro para tranquilidad, esfera de vidrio central para un toque futurista y llamativo.',
-  pageDescription:
-    'En este primer desafío tendrás que maquetar una pequeña tarjeta con un código QR donde podrás practicar, entre otras propiedades:',
-  skills: ['Margin', 'Padding', 'Border radius', 'Imágenes', 'Fuentes', 'Background-color'],
+  pageDescription: 'En este desafío tendrás que maquetar un hero responsive donde podrás practicar, entre otras cosas:',
+  skills: ['Position', 'Flex', 'Border radius', 'Background-image', 'Pseudoelementos'],
   suggestions: [
     'Variables CSS para guardar los colores, los tamaños y los pesos de las fuentes.',
     'Importar las fuentes en el HTML y no en el CSS'
   ],
-  restrictions: ['No se puede usar ningún tipo de framework y/o librería.', 'No está permitido el uso de flexbox ni de grid.'],
+  restrictions: ['No se puede usar ningún tipo de framework y/o librería.'],
   image: '/assets/images/challenges/responsive-hero.jpg',
   link: 'https://github.com/AprendeFrontend/responsive-hero/archive/refs/heads/main.zip',
   level: LEVELS.JUNIOR,
