@@ -1,23 +1,6 @@
 import { LEVELS } from '../levels';
 import { TECHNOLOGIES } from '../technologies';
 
-const PRICE_TABLES = {
-  id: '4b7a9699-1d7f-484e-9eb7-7bddd6018496',
-  name: 'Price Tables',
-  headerDescription:
-    'Diseño moderno de tablas de precios: limpio, claro y comparativo. Elementos visuales guían al usuario a elegir la mejor opción.',
-  pageDescription:
-    'En este primer desafío tendrás que maquetar una pequeña tarjeta con un código QR donde podrás practicar, entre otras propiedades:',
-  skills: ['Margin', 'Padding', 'Border radius', 'Imágenes', 'Fuentes', 'Background-color'],
-  suggestions: ['Variables CSS para guardar datos que repitas.', 'Importar las fuentes en el HTML y no en el CSS'],
-  restrictions: ['No se puede usar ningún tipo de framework y/o librería.', 'No está permitido el uso de flexbox ni de grid.'],
-  image: '/assets/images/challenges/price-tables.jpg',
-  link: 'https://github.com/AprendeFrontend/price-tables/archive/refs/heads/main.zip',
-  level: LEVELS.JUNIOR,
-  technology: TECHNOLOGIES.HTML_CSS,
-  color: '--junior'
-};
-
 const QR_CODE_COMPONENT = {
   id: 'cc0721b5-4130-4324-851c-b3af98a37963',
   name: 'QR code component',
@@ -33,6 +16,26 @@ const QR_CODE_COMPONENT = {
   restrictions: ['No se puede usar ningún tipo de framework y/o librería.', 'No está permitido el uso de flexbox ni de grid.'],
   image: '/assets/images/challenges/qr-code.jpg',
   link: 'https://github.com/AprendeFrontend/qr-code-component/archive/refs/heads/main.zip',
+  level: LEVELS.TRAINEE,
+  technology: TECHNOLOGIES.HTML_CSS,
+  color: '--trainee'
+};
+
+const CREDIT_CARDS = {
+  id: '9c7e8f34-2bdf-49e9-b2d6-6e48fc72db73',
+  name: 'Credit Cards Display',
+  headerDescription:
+    'Diseño de tres tarjetas de crédito estilizadas: degradados vivos, disposición horizontal, fondo claro, logotipo, titular y número destacados.',
+  pageDescription:
+    'En este primer desafío tendrás que maquetar una pequeña tarjeta con un código QR donde podrás practicar, entre otras propiedades:',
+  skills: ['Margin', 'Padding', 'Border radius', 'Imágenes', 'Fuentes', 'Background-color'],
+  suggestions: [
+    'Variables CSS para guardar los colores, los tamaños y los pesos de las fuentes.',
+    'Importar las fuentes en el HTML y no en el CSS'
+  ],
+  restrictions: ['No se puede usar ningún tipo de framework y/o librería.', 'No está permitido el uso de flexbox ni de grid.'],
+  image: '/assets/images/challenges/cards.jpg',
+  link: 'https://github.com/AprendeFrontend/credit-cards-display/archive/refs/heads/main.zip',
   level: LEVELS.TRAINEE,
   technology: TECHNOLOGIES.HTML_CSS,
   color: '--trainee'
@@ -58,6 +61,23 @@ const PROFILE_CARD = {
   color: '--trainee'
 };
 
+const PRICE_TABLES = {
+  id: '4b7a9699-1d7f-484e-9eb7-7bddd6018496',
+  name: 'Price Tables',
+  headerDescription:
+    'Diseño moderno de tablas de precios: limpio, claro y comparativo. Elementos visuales guían al usuario a elegir la mejor opción.',
+  pageDescription:
+    'En este primer desafío tendrás que maquetar una pequeña tarjeta con un código QR donde podrás practicar, entre otras propiedades:',
+  skills: ['Margin', 'Padding', 'Border radius', 'Imágenes', 'Fuentes', 'Background-color'],
+  suggestions: ['Variables CSS para guardar datos que repitas.', 'Importar las fuentes en el HTML y no en el CSS'],
+  restrictions: ['No se puede usar ningún tipo de framework y/o librería.', 'No está permitido el uso de flexbox ni de grid.'],
+  image: '/assets/images/challenges/price-tables.jpg',
+  link: 'https://github.com/AprendeFrontend/price-tables/archive/refs/heads/main.zip',
+  level: LEVELS.JUNIOR,
+  technology: TECHNOLOGIES.HTML_CSS,
+  color: '--junior'
+};
+
 const PRODUCT_CARD = {
   id: '321b2fbb-aec8-43d5-9526-5ae14072a312',
   name: 'Product card',
@@ -76,25 +96,6 @@ const PRODUCT_CARD = {
   level: LEVELS.JUNIOR,
   technology: TECHNOLOGIES.HTML_CSS,
   color: '--junior'
-};
-const CREDIT_CARDS = {
-  id: '9c7e8f34-2bdf-49e9-b2d6-6e48fc72db73',
-  name: 'Credit Cards Display',
-  headerDescription:
-    'Diseño de tres tarjetas de crédito estilizadas: degradados vivos, disposición horizontal, fondo claro, logotipo, titular y número destacados.',
-  pageDescription:
-    'En este primer desafío tendrás que maquetar una pequeña tarjeta con un código QR donde podrás practicar, entre otras propiedades:',
-  skills: ['Margin', 'Padding', 'Border radius', 'Imágenes', 'Fuentes', 'Background-color'],
-  suggestions: [
-    'Variables CSS para guardar los colores, los tamaños y los pesos de las fuentes.',
-    'Importar las fuentes en el HTML y no en el CSS'
-  ],
-  restrictions: ['No se puede usar ningún tipo de framework y/o librería.', 'No está permitido el uso de flexbox ni de grid.'],
-  image: '/assets/images/challenges/cards.jpg',
-  link: 'https://github.com/AprendeFrontend/credit-cards-display/archive/refs/heads/main.zip',
-  level: LEVELS.TRAINEE,
-  technology: TECHNOLOGIES.HTML_CSS,
-  color: '--trainee'
 };
 
 const RESPONSIVE_HERO = {
