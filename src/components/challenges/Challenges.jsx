@@ -9,7 +9,7 @@ import Button from '../button/Button';
 import Footer from '../footer/Footer';
 import styles from './challenges.module.css';
 
-const buttons = ['Todos los retos', 'HTML - CSS', 'JavaScript'];
+const buttons = ['HTML - CSS', 'JavaScript'];
 
 const Challenges = () => {
   const [active, setActive] = useState(0);
@@ -70,9 +70,9 @@ const Challenges = () => {
 };
 
 const filterChallenges = (challenges, filter) => {
-  if (filter === 0) return [...challenges];
-  if (filter === 1) return challenges.filter(challenge => challenge.technology === TECHNOLOGIES.HTML_CSS).sort((a, b) => a.level - b.level);
-  if (filter === 2)
+  // if (filter === 0) return [...challenges];
+  if (filter === 0) return challenges.filter(challenge => challenge.technology === TECHNOLOGIES.HTML_CSS).sort((a, b) => a.level - b.level);
+  if (filter === 1)
     return challenges.filter(challenge => challenge.technology === TECHNOLOGIES.JAVASCRIPT).sort((a, b) => a.level - b.level);
 };
 

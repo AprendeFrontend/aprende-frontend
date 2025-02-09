@@ -8,7 +8,7 @@ const GUESS_THE_NUMBER = {
     'Interfaz de juego interactivo: fondo geométrico claro, tarjeta central oscura, título "GUESS THE NUMBER" y números interactivos destacados.',
   pageDescription:
     'En este desafío tendrás que realizar un juego interactivo donde adivinarás un número que se genera de forma aleatoria, podrás practicar entre otras cosas:',
-  skills: ['DOM', 'Generación Aleatoria', 'Funciones', 'Eventos', 'Funciones'],
+  skills: ['DOM', 'Generación Aleatoria', 'Funciones', 'Eventos'],
   suggestions: [
     'Variables CSS para guardar los colores, los tamaños y los pesos de las fuentes.',
     'Importar las fuentes en el HTML y no en el CSS'
@@ -16,6 +16,7 @@ const GUESS_THE_NUMBER = {
   restrictions: ['No se puede usar ningún tipo de framework y/o librería.'],
   image: '/assets/images/challenges/guess-the-number.jpg',
   requirements: 'Interfaz responsiva y lógica básica de interacción',
+  link: 'https://github.com/AprendeFrontend/guess-the-number/archive/refs/heads/main.zip',
   level: LEVELS.TRAINEE,
   technology: TECHNOLOGIES.JAVASCRIPT,
   color: '--trainee'
@@ -36,6 +37,7 @@ const SIMPLE_PASSWORD_GENERATOR = {
   restrictions: ['No se puede usar ningún tipo de framework y/o librería.'],
   image: '/assets/images/challenges/simple-password-generator.jpg',
   requirements: 'Interfaz responsiva y generación de contraseñas seguras',
+  link: 'https://github.com/AprendeFrontend/simple-password-generator/archive/refs/heads/main.zip',
   level: LEVELS.TRAINEE,
   technology: TECHNOLOGIES.JAVASCRIPT,
   color: '--trainee'
@@ -53,7 +55,7 @@ const MEMORY_GAME = {
   ],
   restrictions: ['No se puede usar ningún tipo de framework y/o librería.'],
   image: '/assets/images/challenges/memory-game.jpg',
-  link: 'https://github.com/AprendeFrontend/smartwatch-interface/archive/refs/heads/main.zip',
+  link: 'https://github.com/AprendeFrontend/memory-game/archive/refs/heads/main.zip',
   level: LEVELS.JUNIOR,
   technology: TECHNOLOGIES.JAVASCRIPT,
   color: '--junior'
@@ -73,7 +75,7 @@ const FORM_VALIDATE = {
   ],
   restrictions: ['No se puede usar ningún tipo de framework y/o librería.'],
   image: '/assets/images/challenges/form-validate.jpg',
-  link: 'https://github.com/AprendeFrontend/smartwatch-interface/archive/refs/heads/main.zip',
+  link: 'https://github.com/AprendeFrontend/form-validate/archive/refs/heads/main.zip',
   level: LEVELS.JUNIOR,
   technology: TECHNOLOGIES.JAVASCRIPT,
   color: '--junior'
@@ -94,6 +96,7 @@ const ADVANCED_PASSWORD_GENERATOR = {
   restrictions: ['No se puede usar ningún tipo de framework y/o librería.'],
   image: '/assets/images/challenges/advanced-password-generator.jpg',
   requirements: 'Interactividad avanzada y diseño adaptable',
+  link: 'https://github.com/AprendeFrontend/advanced-password-generator/archive/refs/heads/main.zip',
   level: LEVELS.JUNIOR,
   technology: TECHNOLOGIES.JAVASCRIPT,
   color: '--junior'
