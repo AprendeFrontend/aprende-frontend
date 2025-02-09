@@ -8,7 +8,7 @@ const GUESS_THE_NUMBER = {
     'Interfaz de juego interactivo: fondo geométrico claro, tarjeta central oscura, título "GUESS THE NUMBER" y números interactivos destacados.',
   pageDescription:
     'En este desafío tendrás que realizar un juego interactivo donde adivinarás un número que se genera de forma aleatoria, podrás practicar entre otras cosas:',
-  skills: ['DOM', 'Generación Aleatoria', 'Eventos', 'Funciones'],
+  skills: ['DOM', 'Generación Aleatoria', 'Funciones', 'Eventos', 'Funciones'],
   suggestions: [
     'Variables CSS para guardar los colores, los tamaños y los pesos de las fuentes.',
     'Importar las fuentes en el HTML y no en el CSS'
@@ -27,8 +27,8 @@ const SIMPLE_PASSWORD_GENERATOR = {
   headerDescription:
     'Interfaz moderna para generar contraseñas: tonos oscuros con degradados morados, diseño funcional, profesional y visualmente atractivo.',
   pageDescription:
-    'En este desafío tendrás que desarrollar un generador de contraseñas en base a su longitud, podrás practicar, entre otras cosas:',
-  skills: ['DOM', 'Eventos', 'Strings'],
+    'En este desafío tendrás que desarrollar un generador de contraseñas en base a la longitud seleccionada, podrás practicar, entre otras cosas:',
+  skills: ['DOM', 'Eventos', 'Funciones', 'Strings'],
   suggestions: [
     'Variables CSS para guardar los colores, los tamaños y los pesos de las fuentes.',
     'Importar las fuentes en el HTML y no en el CSS'
@@ -41,21 +41,19 @@ const SIMPLE_PASSWORD_GENERATOR = {
   color: '--trainee'
 };
 
-const ADVANCED_PASSWORD_GENERATOR = {
-  id: 'c8b9e234-77b4-4981-a63f-5b9f6d237fe8',
-  name: 'Advanced Password Generator',
-  headerDescription:
-    'Generador de contraseñas avanzado con un control deslizante y opciones para incluir mayúsculas, minúsculas, números y símbolos.',
-  pageDescription:
-    'En este primer desafío tendrás que maquetar una pequeña tarjeta con un código QR donde podrás practicar, entre otras propiedades:',
-  skills: ['Margin', 'Padding', 'Border radius', 'Imágenes', 'Fuentes', 'Background-color'],
+const MEMORY_GAME = {
+  id: '91e4f748-319c-4999-8798-fddfe551bce1',
+  name: 'Memory Game',
+  headerDescription: 'Memory game donde el jugador tendrá que revelar las tarjetas y encontrar las imágenes que coinciden.',
+  pageDescription: 'En este desafío tendrás que maquetar un juego de encontrar parejas donde podrás practicar, entre otras propiedades:',
+  skills: ['DOM', 'Eventos', 'Funciones', 'Timers', 'Arrays'],
   suggestions: [
     'Variables CSS para guardar los colores, los tamaños y los pesos de las fuentes.',
     'Importar las fuentes en el HTML y no en el CSS'
   ],
-  restrictions: ['No se puede usar ningún tipo de framework y/o librería.', 'No está permitido el uso de flexbox ni de grid.'],
-  image: '/assets/images/challenges/advanced-password-generator.jpg',
-  requirements: 'Interactividad avanzada y diseño adaptable',
+  restrictions: ['No se puede usar ningún tipo de framework y/o librería.'],
+  image: '/assets/images/challenges/memory-game.jpg',
+  link: 'https://github.com/AprendeFrontend/smartwatch-interface/archive/refs/heads/main.zip',
   level: LEVELS.JUNIOR,
   technology: TECHNOLOGIES.JAVASCRIPT,
   color: '--junior'
@@ -68,12 +66,12 @@ const FORM_VALIDATE = {
     'Formulario de validación de contraseñas que verifica requisitos mínimos como caracteres especiales, números y letras mayúsculas.',
   pageDescription:
     'En este primer desafío tendrás que maquetar un formulario de validación de contraseñas donde podrás practicar, entre otras propiedades:',
-  skills: ['Margin', 'Padding', 'Border radius', 'Imágenes', 'Fuentes', 'Background-color'],
+  skills: ['DOM', 'Eventos', 'Objetos', 'Funciones', 'Validación de formularios'],
   suggestions: [
     'Variables CSS para guardar los colores, los tamaños y los pesos de las fuentes.',
     'Importar las fuentes en el HTML y no en el CSS'
   ],
-  restrictions: ['No se puede usar ningún tipo de framework y/o librería.', 'No está permitido el uso de flexbox ni de grid.'],
+  restrictions: ['No se puede usar ningún tipo de framework y/o librería.'],
   image: '/assets/images/challenges/form-validate.jpg',
   link: 'https://github.com/AprendeFrontend/smartwatch-interface/archive/refs/heads/main.zip',
   level: LEVELS.JUNIOR,
@@ -81,19 +79,21 @@ const FORM_VALIDATE = {
   color: '--junior'
 };
 
-const MEMORY_GAME = {
-  id: '91e4f748-319c-4999-8798-fddfe551bce1',
-  name: 'Memory Game',
-  headerDescription: 'Memory game donde el jugador tendrá que revelar las tarjetas y encontrar las imágenes que coinciden.',
-  pageDescription: 'En este desafío tendrás que maquetar un juego de encontrar parejas donde podrás practicar, entre otras propiedades:',
-  skills: ['Margin', 'Padding', 'Border radius', 'Imágenes', 'Fuentes', 'Background-color'],
+const ADVANCED_PASSWORD_GENERATOR = {
+  id: 'c8b9e234-77b4-4981-a63f-5b9f6d237fe8',
+  name: 'Advanced Password Generator',
+  headerDescription:
+    'Generador de contraseñas avanzado con un control deslizante y opciones para incluir mayúsculas, minúsculas, números y símbolos.',
+  pageDescription:
+    'En este desafío tendrás que mejorar el generador de password simple añadiendo opciones a la contraseña generada, con este desafío podrás practicar, entre otras propiedades:',
+  skills: ['DOM', 'Eventos', 'Objetos', 'Funciones'],
   suggestions: [
     'Variables CSS para guardar los colores, los tamaños y los pesos de las fuentes.',
     'Importar las fuentes en el HTML y no en el CSS'
   ],
-  restrictions: ['No se puede usar ningún tipo de framework y/o librería.', 'No está permitido el uso de flexbox ni de grid.'],
-  image: '/assets/images/challenges/memory-game.jpg',
-  link: 'https://github.com/AprendeFrontend/smartwatch-interface/archive/refs/heads/main.zip',
+  restrictions: ['No se puede usar ningún tipo de framework y/o librería.'],
+  image: '/assets/images/challenges/advanced-password-generator.jpg',
+  requirements: 'Interactividad avanzada y diseño adaptable',
   level: LEVELS.JUNIOR,
   technology: TECHNOLOGIES.JAVASCRIPT,
   color: '--junior'
@@ -105,8 +105,8 @@ const BLACK_PLATE = {
   headerDescription:
     'Diseño elegante: interfaz oscura con detalles dorados, ideal para restaurantes gourmet. Dos secciones principales para navegación intuitiva.',
   pageDescription:
-    'En este primer desafío tendrás que maquetar una pequeña tarjeta con un código QR donde podrás practicar, entre otras propiedades:',
-  skills: ['Margin', 'Padding', 'Border radius', 'Imágenes', 'Fuentes', 'Background-color'],
+    'En este primer desafío tendrás que maquetar la tienda de un restaurante con su carrito de la compra. En este desafío podrás practicar, entre otras propiedades:',
+  skills: ['DOM', 'Eventos', 'Objetos', 'Arrays', 'Funciones', 'Filtros'],
   suggestions: [
     'Variables CSS para guardar los colores, los tamaños y los pesos de las fuentes.',
     'Importar las fuentes en el HTML y no en el CSS'
