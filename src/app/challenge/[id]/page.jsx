@@ -113,20 +113,6 @@ const ChallengePage = () => {
             {viewForm && (
               <form className={styles['delivery-form']} onSubmit={event => handleSubmit(event, id, user.uid, setFormErrors, setViewForm)}>
                 <div className={styles['delivery-form-field']}>
-                  <label htmlFor='username' className={styles['delivery-form-label']}>
-                    Nombre de Usuario
-                  </label>
-                  <input
-                    type='text'
-                    id='username'
-                    name='username'
-                    placeholder='e.g. doriandesings'
-                    defaultValue={userStartProject.username || ''}
-                    className={styles['delivery-form-input']}
-                  />
-                  {formErrors.username && <span className={styles['delivery-form-error']}>Introduce el nombre de usuario</span>}
-                </div>
-                <div className={styles['delivery-form-field']}>
                   <label htmlFor='github-url' className={styles['delivery-form-label']}>
                     URL de Github
                   </label>
@@ -192,7 +178,6 @@ const startChallenge = async (id, userId) => {
 
 const handleSubmit = async (event, id, userId, setFormErrors, setViewForm) => {
   event.preventDefault();
-  const username = event.target.username.value;
   const githubURL = event.target.githubUrl.value;
   const liveURL = event.target.liveUrl.value;
 
@@ -201,12 +186,11 @@ const handleSubmit = async (event, id, userId, setFormErrors, setViewForm) => {
   const isGithubURL = githubRegex.test(githubURL);
 
   setFormErrors({
-    username: !username,
     githubURL: !githubURL || !isGithubURL,
     liveURL: !liveURL
   });
 
-  if (!username || !githubURL || !isGithubURL || !liveURL) return;
+  if (!githubURL || !isGithubURL || !liveURL) return;
 
   try {
     const userRef = doc(usersCollectionReference, userId);
@@ -233,8 +217,7 @@ const handleSubmit = async (event, id, userId, setFormErrors, setViewForm) => {
       ...projects[projectIndex],
       submitted: true,
       githubURL,
-      liveURL,
-      username
+      liveURL
     };
 
     // Guardar el array actualizado en Firestore
