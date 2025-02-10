@@ -70,7 +70,6 @@ const Challenges = () => {
 };
 
 const filterChallenges = (challenges, filter) => {
-  // if (filter === 0) return [...challenges];
   if (filter === 0) return challenges.filter(challenge => challenge.technology === TECHNOLOGIES.HTML_CSS).sort((a, b) => a.level - b.level);
   if (filter === 1)
     return challenges.filter(challenge => challenge.technology === TECHNOLOGIES.JAVASCRIPT).sort((a, b) => a.level - b.level);

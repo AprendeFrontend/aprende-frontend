@@ -6,14 +6,15 @@ import { useContext, useEffect, useState } from 'react';
 import { auth, usersCollectionReference } from '../config/firebase.config';
 
 // Proveedor del contexto
+// Proveedor del contexto
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    let unsubscribeUser;
+    let unsubscribeUser = null;
 
-    const unsubscribeAuth = auth.onAuthStateChanged(async user => {
+    const handleUser = async user => {
       if (!user) {
         setUser(null);
         setLoading(false);
@@ -21,14 +22,24 @@ export const AuthProvider = ({ children }) => {
       }
 
       const userRef = doc(usersCollectionReference, user.uid);
+      const userSnap = await getDoc(userRef);
+
+      // Si el usuario no existe en Firestore, lo guardamos
+      if (!userSnap.exists()) {
+        await saveUserIfNotExists(user);
+      }
+
+      // Suscribirse a los cambios del usuario en Firestore
       unsubscribeUser = onSnapshot(userRef, docSnapshot => {
-        setUser(docSnapshot.exists() ? { ...docSnapshot.data(), uid: user.uid } : { uid: user.uid });
+        setUser(docSnapshot.exists() ? { ...docSnapshot.data(), uid: user.uid } : null);
         setLoading(false);
       });
-    });
+    };
+
+    const unsubscribeAuth = auth.onAuthStateChanged(handleUser);
 
     return () => {
-      unsubscribeUser?.();
+      if (unsubscribeUser) unsubscribeUser();
       unsubscribeAuth();
     };
   }, []);
